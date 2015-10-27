@@ -1,0 +1,980 @@
+mak@crab 738 GradleLicensePlexus [master] $ ~/lucidworks/Fusion/gradlew --debug --stacktrace downloadLicenses
+20:44:29.754 [DEBUG] [org.gradle.internal.resource.transport.http.JavaSystemPropertiesProxySettings] Found java system property 'http.nonProxyHosts': local|*.local|169.254/16|*.169.254/16. Will ignore proxy settings for these hosts.
+20:44:29.884 [INFO] [org.gradle.BuildLogger] Starting Build
+20:44:29.887 [DEBUG] [org.gradle.BuildLogger] Gradle user home: /Users/mak/.gradle
+20:44:29.888 [DEBUG] [org.gradle.BuildLogger] Current dir: /Users/mak/projects/GradleLicensePlexus
+20:44:29.889 [DEBUG] [org.gradle.BuildLogger] Settings file: null
+20:44:29.890 [DEBUG] [org.gradle.BuildLogger] Build file: null
+20:44:29.903 [DEBUG] [org.gradle.initialization.buildsrc.BuildSourceBuilder] Starting to build the build sources.
+20:44:29.904 [DEBUG] [org.gradle.initialization.buildsrc.BuildSourceBuilder] Gradle source dir does not exist. We leave.
+20:44:29.907 [DEBUG] [org.gradle.initialization.DefaultGradlePropertiesLoader] Found env project properties: []
+20:44:29.909 [DEBUG] [org.gradle.initialization.DefaultGradlePropertiesLoader] Found system project properties: []
+20:44:29.978 [DEBUG] [org.gradle.initialization.ScriptEvaluatingSettingsProcessor] Timing: Processing settings took: 0.068 secs
+20:44:29.981 [INFO] [org.gradle.BuildLogger] Settings evaluated using settings file '/master/settings.gradle'.
+20:44:30.138 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks' from state Known to Created
+20:44:30.143 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element 'tasks' creator rule action Project.<init>.tasks()
+20:44:30.145 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Creating tasks using Project.<init>.tasks()
+20:44:30.160 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks' to state Created.
+20:44:30.166 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] Looking for project properties from: /Users/mak/projects/GradleLicensePlexus/gradle.properties
+20:44:30.167 [DEBUG] [org.gradle.initialization.ProjectPropertySettingBuildLoader] project property file does not exists. We continue!
+20:44:30.267 [INFO] [org.gradle.BuildLogger] Projects loaded. Root project using build file '/Users/mak/projects/GradleLicensePlexus/build.gradle'.
+20:44:30.268 [INFO] [org.gradle.BuildLogger] Included projects: [root project 'GradleLicensePlexus']
+20:44:30.420 [INFO] [org.gradle.configuration.project.BuildScriptProcessor] Evaluating root project 'GradleLicensePlexus' using build file '/Users/mak/projects/GradleLicensePlexus/build.gradle'.
+20:44:30.437 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Adding IP addresses for network interface vboxnet2
+20:44:30.439 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Is this a loopback interface? false
+20:44:30.440 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Is this a multicast interface? true
+20:44:30.442 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Adding remote address /192.168.99.1
+20:44:30.443 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Adding remote multicast interface vboxnet2
+20:44:30.444 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Adding IP addresses for network interface en1
+20:44:30.446 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Is this a loopback interface? false
+20:44:30.447 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Is this a multicast interface? true
+20:44:30.449 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Adding remote address /fe80:0:0:0:e6ce:8fff:fe0a:f910%5
+20:44:30.450 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Adding remote address /192.168.0.114
+20:44:30.451 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Adding remote multicast interface en1
+20:44:30.452 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Adding IP addresses for network interface en0
+20:44:30.454 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Is this a loopback interface? false
+20:44:30.458 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Is this a multicast interface? true
+20:44:30.459 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Adding remote address /2a02:8011:4004:88:0:0:0:9
+20:44:30.460 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Adding remote address /fe80:0:0:0:ca2a:14ff:fe25:b059%4
+20:44:30.462 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Adding remote address /192.168.88.9
+20:44:30.464 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Adding remote multicast interface en0
+20:44:30.465 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Adding IP addresses for network interface lo0
+20:44:30.466 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Is this a loopback interface? true
+20:44:30.468 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Is this a multicast interface? true
+20:44:30.470 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Ignoring remote address on loopback interface /fe80:0:0:0:0:0:0:1%1
+20:44:30.471 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Adding loopback address /0:0:0:0:0:0:0:1
+20:44:30.472 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Adding loopback address /127.0.0.1
+20:44:30.473 [DEBUG] [org.gradle.messaging.remote.internal.inet.InetAddressFactory] Adding loopback multicast interface lo0
+20:44:30.483 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on cp_proj class cache for build file '/Users/mak/projects/GradleLicensePlexus/build.gradle' (/Users/mak/.gradle/caches/2.7/scripts/build_1dnwxyfgpqf632tuuarmvb51c/cp_proj).
+20:44:30.485 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+20:44:30.504 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on Plugin Resolution Cache (/Users/mak/.gradle/caches/2.7/plugin-resolution).
+20:44:30.507 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+20:44:30.510 [DEBUG] [org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler] Starting file lock listener thread.
+20:44:30.520 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache plugin-use-metadata.bin (/Users/mak/.gradle/caches/2.7/plugin-resolution/plugin-use-metadata.bin)
+20:44:30.611 [DEBUG] [org.gradle.api.internal.artifacts.mvnsettings.DefaultLocalMavenRepositoryLocator] No local repository in Settings file defined. Using default path: /Users/mak/.m2/repository
+20:44:30.798 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on artifact cache (/Users/mak/.gradle/caches/modules-2).
+20:44:30.799 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+20:44:30.821 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'ivy.default.settings.dir' to 'jar:file:/Users/mak/.gradle/wrapper/dists/gradle-2.7-bin/7r4xboi13nyqrkv2ewrzb9bgh/gradle-2.7/lib/plugins/ivy-2.2.0.jar!/org/apache/ivy/core/settings'
+20:44:30.823 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'ivy.basedir' to '/Users/mak/projects/GradleLicensePlexus/.'
+20:44:30.824 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'ivy.default.conf.dir' to 'jar:file:/Users/mak/.gradle/wrapper/dists/gradle-2.7-bin/7r4xboi13nyqrkv2ewrzb9bgh/gradle-2.7/lib/plugins/ivy-2.2.0.jar!/org/apache/ivy/core/settings'
+20:44:30.867 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.runtime.name' to 'Java(TM) SE Runtime Environment'
+20:44:30.868 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'jna.platform.library.path' to '/usr/lib:/usr/lib'
+20:44:30.869 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.boot.library.path' to '/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib'
+20:44:30.869 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.version' to '24.71-b01'
+20:44:30.870 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.country.format' to 'GB'
+20:44:30.871 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'gopherProxySet' to 'false'
+20:44:30.872 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.vendor' to 'Oracle Corporation'
+20:44:30.873 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vendor.url' to 'http://java.oracle.com/'
+20:44:30.873 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'path.separator' to ':'
+20:44:30.874 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.name' to 'Java HotSpot(TM) 64-Bit Server VM'
+20:44:30.877 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'file.encoding.pkg' to 'sun.io'
+20:44:30.878 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.country' to 'US'
+20:44:30.878 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.java.launcher' to 'SUN_STANDARD'
+20:44:30.879 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.os.patch.level' to 'unknown'
+20:44:30.880 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.specification.name' to 'Java Virtual Machine Specification'
+20:44:30.881 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.dir' to '/Users/mak/projects/GradleLicensePlexus'
+20:44:30.882 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.runtime.version' to '1.7.0_71-b14'
+20:44:30.882 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.awt.graphicsenv' to 'sun.awt.CGraphicsEnvironment'
+20:44:30.883 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.endorsed.dirs' to '/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/endorsed'
+20:44:30.884 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'os.arch' to 'x86_64'
+20:44:30.885 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.io.tmpdir' to '/var/folders/r1/25k3rfyd61b_4c23628p2ysr0000gn/T/'
+20:44:30.885 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'line.separator' to '
+'
+20:44:30.886 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'org.gradle.appname' to 'gradlew'
+20:44:30.887 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.specification.vendor' to 'Oracle Corporation'
+20:44:30.888 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'os.name' to 'Mac OS X'
+20:44:30.889 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.jnu.encoding' to 'UTF-8'
+20:44:30.890 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.library.path' to '/Users/mak/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.'
+20:44:30.891 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'http.keepAlive' to 'true'
+20:44:30.891 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.class.version' to '51.0'
+20:44:30.892 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.specification.name' to 'Java Platform API Specification'
+20:44:30.893 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.management.compiler' to 'HotSpot 64-Bit Tiered Compilers'
+20:44:30.894 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'os.version' to '10.11.1'
+20:44:30.896 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'http.nonProxyHosts' to 'local|*.local|169.254/16|*.169.254/16'
+20:44:30.897 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.home' to '/Users/mak'
+20:44:30.898 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.timezone' to 'Europe/London'
+20:44:30.899 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.awt.printerjob' to 'sun.lwawt.macosx.CPrinterJob'
+20:44:30.899 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.specification.version' to '1.7'
+20:44:30.900 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'file.encoding' to 'UTF-8'
+20:44:30.901 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.name' to 'mak'
+20:44:30.902 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.class.path' to '/Users/mak/lucidworks/Fusion/gradle/wrapper/gradle-wrapper.jar'
+20:44:30.902 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.specification.version' to '1.7'
+20:44:30.903 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.arch.data.model' to '64'
+20:44:30.904 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.java.command' to 'org.gradle.wrapper.GradleWrapperMain --debug --stacktrace downloadLicenses'
+20:44:30.905 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.home' to '/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre'
+20:44:30.906 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.specification.vendor' to 'Oracle Corporation'
+20:44:30.906 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'user.language' to 'en'
+20:44:30.907 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'awt.toolkit' to 'sun.lwawt.macosx.LWCToolkit'
+20:44:30.908 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vm.info' to 'mixed mode'
+20:44:30.909 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.version' to '1.7.0_71'
+20:44:30.911 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.ext.dirs' to '/Users/mak/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java'
+20:44:30.912 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.boot.class.path' to '/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/classes'
+20:44:30.913 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vendor' to 'Oracle Corporation'
+20:44:30.914 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'file.separator' to '/'
+20:44:30.914 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'java.vendor.url.bug' to 'http://bugreport.sun.com/bugreport/'
+20:44:30.915 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.io.unicode.encoding' to 'UnicodeBig'
+20:44:30.916 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.cpu.endian' to 'little'
+20:44:30.917 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'socksNonProxyHosts' to 'local|*.local|169.254/16|*.169.254/16'
+20:44:30.918 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'ftp.nonProxyHosts' to 'local|*.local|169.254/16|*.169.254/16'
+20:44:30.919 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.IvyLoggingAdaper] setting 'sun.cpu.isalist' to ''
+20:44:30.939 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DefaultArtifactDependencyResolver] Resolving configuration ':classpath'
+20:44:30.966 [DEBUG] [org.gradle.internal.resource.transport.http.JavaSystemPropertiesProxySettings] Found java system property 'http.nonProxyHosts': local|*.local|169.254/16|*.169.254/16. Will ignore proxy settings for these hosts.
+20:44:30.985 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] Creating new in-memory cache for repo 'maven' [c12d174581602785ab9b0cd255906120].
+20:44:31.023 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration :GradleLicensePlexus:unspecified(classpath).
+20:44:31.028 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency :GradleLicensePlexus:unspecified(classpath) -> gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.12.1(classpath)
+20:44:31.032 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.12.1
+20:44:31.034 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.12.1 using repositories [maven]
+20:44:31.039 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache module-metadata.bin (/Users/mak/.gradle/caches/modules-2/metadata-2.15/module-metadata.bin)
+20:44:31.099 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.116 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.12.1' in 'maven'
+20:44:31.120 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.12.1 from Maven repository 'maven'
+20:44:31.122 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.12.1(default).
+20:44:31.124 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.12.1(default) -> org.codehaus.plexus:plexus-utils:2.0.5(compile,runtime)
+20:44:31.125 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.codehaus.plexus:plexus-utils:2.0.5
+20:44:31.126 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for org.codehaus.plexus:plexus-utils:2.0.5 using repositories [maven]
+20:44:31.132 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.137 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'org.codehaus.plexus:plexus-utils:2.0.5' in 'maven'
+20:44:31.138 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using org.codehaus.plexus:plexus-utils:2.0.5 from Maven repository 'maven'
+20:44:31.140 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.12.1(default) -> com.mycila.xmltool:xmltool:3.3(compile,runtime)
+20:44:31.140 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.mycila.xmltool:xmltool:3.3
+20:44:31.141 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for com.mycila.xmltool:xmltool:3.3 using repositories [maven]
+20:44:31.144 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.150 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.mycila.xmltool:xmltool:3.3' in 'maven'
+20:44:31.151 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using com.mycila.xmltool:xmltool:3.3 from Maven repository 'maven'
+20:44:31.152 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.12.1(default) -> com.mycila.maven-license-plugin:maven-license-plugin:1.10.b1(compile,runtime)
+20:44:31.153 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.mycila.maven-license-plugin:maven-license-plugin:1.10.b1
+20:44:31.154 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for com.mycila.maven-license-plugin:maven-license-plugin:1.10.b1 using repositories [maven]
+20:44:31.157 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.162 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.mycila.maven-license-plugin:maven-license-plugin:1.10.b1' in 'maven'
+20:44:31.163 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using com.mycila.maven-license-plugin:maven-license-plugin:1.10.b1 from Maven repository 'maven'
+20:44:31.165 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.12.1(default) -> com.android.tools.build:gradle:1.0.+(compile,runtime)
+20:44:31.167 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.DynamicVersionResolver] Attempting to resolve version for com.android.tools.build:gradle:1.0.+ using repositories [maven]
+20:44:31.173 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache module-versions.bin (/Users/mak/.gradle/caches/modules-2/metadata-2.15/module-versions.bin)
+20:44:31.186 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.191 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.android.tools.build:gradle:1.0.1' in 'maven'
+20:44:31.192 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.DynamicVersionResolver] Using com.android.tools.build:gradle:1.0.1 from Maven repository 'maven'
+20:44:31.193 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.android.tools.build:gradle:1.0.1
+20:44:31.194 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.codehaus.plexus:plexus-utils:2.0.5(compile).
+20:44:31.195 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.codehaus.plexus:plexus-utils:2.0.5(master).
+20:44:31.196 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.codehaus.plexus:plexus-utils:2.0.5(runtime).
+20:44:31.197 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.mycila.xmltool:xmltool:3.3(compile).
+20:44:31.198 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.mycila.xmltool:xmltool:3.3(master).
+20:44:31.199 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.mycila.xmltool:xmltool:3.3(runtime).
+20:44:31.200 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.mycila.maven-license-plugin:maven-license-plugin:1.10.b1(compile).
+20:44:31.204 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] org.apache.maven:maven-plugin-api is excluded from com.mycila.maven-license-plugin:maven-license-plugin:1.10.b1(compile).
+20:44:31.205 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] org.apache.maven:maven-project is excluded from com.mycila.maven-license-plugin:maven-license-plugin:1.10.b1(compile).
+20:44:31.206 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.mycila.maven-license-plugin:maven-license-plugin:1.10.b1(compile) -> com.mycila.xmltool:xmltool:3.3(compile,runtime)
+20:44:31.207 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.mycila.maven-license-plugin:maven-license-plugin:1.10.b1(compile) -> org.codehaus.plexus:plexus-utils:2.0.5(compile,runtime)
+20:44:31.207 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.mycila.maven-license-plugin:maven-license-plugin:1.10.b1(master).
+20:44:31.208 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.mycila.maven-license-plugin:maven-license-plugin:1.10.b1(runtime).
+20:44:31.209 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] org.apache.maven:maven-plugin-api is excluded from com.mycila.maven-license-plugin:maven-license-plugin:1.10.b1(runtime).
+20:44:31.210 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] org.apache.maven:maven-project is excluded from com.mycila.maven-license-plugin:maven-license-plugin:1.10.b1(runtime).
+20:44:31.211 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.mycila.maven-license-plugin:maven-license-plugin:1.10.b1(runtime) -> com.mycila.xmltool:xmltool:3.3(compile,runtime)
+20:44:31.212 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.mycila.maven-license-plugin:maven-license-plugin:1.10.b1(runtime) -> org.codehaus.plexus:plexus-utils:2.0.5(compile,runtime)
+20:44:31.213 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:gradle:1.0.1(compile).
+20:44:31.213 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:gradle:1.0.1(master).
+20:44:31.214 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:gradle:1.0.1(runtime).
+20:44:31.215 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:gradle:1.0.1(runtime) -> com.android.tools.build:builder:1.0.1(runtime)
+20:44:31.216 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.android.tools.build:builder:1.0.1
+20:44:31.217 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for com.android.tools.build:builder:1.0.1 using repositories [maven]
+20:44:31.219 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.225 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.android.tools.build:builder:1.0.1' in 'maven'
+20:44:31.226 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using com.android.tools.build:builder:1.0.1 from Maven repository 'maven'
+20:44:31.227 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:gradle:1.0.1(runtime) -> com.android.tools.lint:lint:24.0.1(runtime)
+20:44:31.228 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.android.tools.lint:lint:24.0.1
+20:44:31.229 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for com.android.tools.lint:lint:24.0.1 using repositories [maven]
+20:44:31.233 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.236 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.android.tools.lint:lint:24.0.1' in 'maven'
+20:44:31.236 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using com.android.tools.lint:lint:24.0.1 from Maven repository 'maven'
+20:44:31.238 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:gradle:1.0.1(runtime) -> net.sf.proguard:proguard-gradle:5.1(runtime)
+20:44:31.238 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version net.sf.proguard:proguard-gradle:5.1
+20:44:31.239 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for net.sf.proguard:proguard-gradle:5.1 using repositories [maven]
+20:44:31.242 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.247 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'net.sf.proguard:proguard-gradle:5.1' in 'maven'
+20:44:31.248 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using net.sf.proguard:proguard-gradle:5.1 from Maven repository 'maven'
+20:44:31.250 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.mycila.xmltool:xmltool:3.3(compile).
+20:44:31.251 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.mycila.xmltool:xmltool:3.3(compile) selects same versions as previous traversal. ignoring
+20:44:31.252 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.mycila.xmltool:xmltool:3.3(master).
+20:44:31.252 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.mycila.xmltool:xmltool:3.3(master) selects same versions as previous traversal. ignoring
+20:44:31.253 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.codehaus.plexus:plexus-utils:2.0.5(compile).
+20:44:31.254 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for org.codehaus.plexus:plexus-utils:2.0.5(compile) selects same versions as previous traversal. ignoring
+20:44:31.254 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.codehaus.plexus:plexus-utils:2.0.5(master).
+20:44:31.255 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for org.codehaus.plexus:plexus-utils:2.0.5(master) selects same versions as previous traversal. ignoring
+20:44:31.256 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.mycila.xmltool:xmltool:3.3(runtime).
+20:44:31.257 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.mycila.xmltool:xmltool:3.3(runtime) selects same versions as previous traversal. ignoring
+20:44:31.257 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.codehaus.plexus:plexus-utils:2.0.5(runtime).
+20:44:31.258 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for org.codehaus.plexus:plexus-utils:2.0.5(runtime) selects same versions as previous traversal. ignoring
+20:44:31.259 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:builder:1.0.1(compile).
+20:44:31.260 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:builder:1.0.1(runtime).
+20:44:31.261 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:builder:1.0.1(runtime) -> com.android.tools.build:builder-model:1.0.1(runtime)
+20:44:31.262 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.android.tools.build:builder-model:1.0.1
+20:44:31.262 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for com.android.tools.build:builder-model:1.0.1 using repositories [maven]
+20:44:31.265 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.267 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.android.tools.build:builder-model:1.0.1' in 'maven'
+20:44:31.268 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using com.android.tools.build:builder-model:1.0.1 from Maven repository 'maven'
+20:44:31.269 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:builder:1.0.1(runtime) -> com.android.tools.build:builder-test-api:1.0.1(runtime)
+20:44:31.270 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.android.tools.build:builder-test-api:1.0.1
+20:44:31.271 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for com.android.tools.build:builder-test-api:1.0.1 using repositories [maven]
+20:44:31.275 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.278 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.android.tools.build:builder-test-api:1.0.1' in 'maven'
+20:44:31.279 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using com.android.tools.build:builder-test-api:1.0.1 from Maven repository 'maven'
+20:44:31.280 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:builder:1.0.1(runtime) -> com.android.tools:sdklib:24.0.1(runtime)
+20:44:31.281 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.android.tools:sdklib:24.0.1
+20:44:31.282 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for com.android.tools:sdklib:24.0.1 using repositories [maven]
+20:44:31.285 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.288 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.android.tools:sdklib:24.0.1' in 'maven'
+20:44:31.289 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using com.android.tools:sdklib:24.0.1 from Maven repository 'maven'
+20:44:31.290 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:builder:1.0.1(runtime) -> com.android.tools:sdk-common:24.0.1(runtime)
+20:44:31.291 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.android.tools:sdk-common:24.0.1
+20:44:31.292 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for com.android.tools:sdk-common:24.0.1 using repositories [maven]
+20:44:31.294 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.297 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.android.tools:sdk-common:24.0.1' in 'maven'
+20:44:31.298 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using com.android.tools:sdk-common:24.0.1 from Maven repository 'maven'
+20:44:31.299 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:builder:1.0.1(runtime) -> com.android.tools:common:24.0.1(runtime)
+20:44:31.300 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.android.tools:common:24.0.1
+20:44:31.300 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for com.android.tools:common:24.0.1 using repositories [maven]
+20:44:31.303 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.305 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.android.tools:common:24.0.1' in 'maven'
+20:44:31.306 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using com.android.tools:common:24.0.1 from Maven repository 'maven'
+20:44:31.307 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:builder:1.0.1(runtime) -> com.android.tools.build:manifest-merger:24.0.1(runtime)
+20:44:31.308 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.android.tools.build:manifest-merger:24.0.1
+20:44:31.309 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for com.android.tools.build:manifest-merger:24.0.1 using repositories [maven]
+20:44:31.311 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.316 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.android.tools.build:manifest-merger:24.0.1' in 'maven'
+20:44:31.317 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using com.android.tools.build:manifest-merger:24.0.1 from Maven repository 'maven'
+20:44:31.318 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:builder:1.0.1(runtime) -> com.android.tools.ddms:ddmlib:24.0.1(runtime)
+20:44:31.319 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.android.tools.ddms:ddmlib:24.0.1
+20:44:31.319 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for com.android.tools.ddms:ddmlib:24.0.1 using repositories [maven]
+20:44:31.322 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.325 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.android.tools.ddms:ddmlib:24.0.1' in 'maven'
+20:44:31.326 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using com.android.tools.ddms:ddmlib:24.0.1 from Maven repository 'maven'
+20:44:31.327 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:builder:1.0.1(runtime) -> com.squareup:javawriter:2.5.0(runtime)
+20:44:31.328 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.squareup:javawriter:2.5.0
+20:44:31.328 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for com.squareup:javawriter:2.5.0 using repositories [maven]
+20:44:31.332 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.335 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.squareup:javawriter:2.5.0' in 'maven'
+20:44:31.335 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using com.squareup:javawriter:2.5.0 from Maven repository 'maven'
+20:44:31.337 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:builder:1.0.1(runtime) -> org.bouncycastle:bcpkix-jdk15on:1.48(runtime)
+20:44:31.337 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.bouncycastle:bcpkix-jdk15on:1.48
+20:44:31.338 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for org.bouncycastle:bcpkix-jdk15on:1.48 using repositories [maven]
+20:44:31.340 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.343 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'org.bouncycastle:bcpkix-jdk15on:1.48' in 'maven'
+20:44:31.344 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using org.bouncycastle:bcpkix-jdk15on:1.48 from Maven repository 'maven'
+20:44:31.345 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:builder:1.0.1(runtime) -> org.bouncycastle:bcprov-jdk15on:1.48(runtime)
+20:44:31.346 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.bouncycastle:bcprov-jdk15on:1.48
+20:44:31.346 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for org.bouncycastle:bcprov-jdk15on:1.48 using repositories [maven]
+20:44:31.350 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.353 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'org.bouncycastle:bcprov-jdk15on:1.48' in 'maven'
+20:44:31.353 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using org.bouncycastle:bcprov-jdk15on:1.48 from Maven repository 'maven'
+20:44:31.354 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:builder:1.0.1(master).
+20:44:31.355 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.lint:lint:24.0.1(compile).
+20:44:31.356 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.lint:lint:24.0.1(runtime).
+20:44:31.356 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.lint:lint:24.0.1(runtime) -> com.android.tools.lint:lint-checks:24.0.1(runtime)
+20:44:31.357 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.android.tools.lint:lint-checks:24.0.1
+20:44:31.358 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for com.android.tools.lint:lint-checks:24.0.1 using repositories [maven]
+20:44:31.361 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.364 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.android.tools.lint:lint-checks:24.0.1' in 'maven'
+20:44:31.365 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using com.android.tools.lint:lint-checks:24.0.1 from Maven repository 'maven'
+20:44:31.366 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.lint:lint:24.0.1(runtime) -> org.eclipse.jdt.core.compiler:ecj:4.2.2(runtime)
+20:44:31.367 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.eclipse.jdt.core.compiler:ecj:4.2.2
+20:44:31.368 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for org.eclipse.jdt.core.compiler:ecj:4.2.2 using repositories [maven]
+20:44:31.370 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.372 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'org.eclipse.jdt.core.compiler:ecj:4.2.2' in 'maven'
+20:44:31.373 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using org.eclipse.jdt.core.compiler:ecj:4.2.2 from Maven repository 'maven'
+20:44:31.374 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.lint:lint:24.0.1(master).
+20:44:31.375 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration net.sf.proguard:proguard-gradle:5.1(compile).
+20:44:31.375 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency net.sf.proguard:proguard-gradle:5.1(compile) -> net.sf.proguard:proguard-base:5.1(compile,runtime)
+20:44:31.376 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version net.sf.proguard:proguard-base:5.1
+20:44:31.377 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for net.sf.proguard:proguard-base:5.1 using repositories [maven]
+20:44:31.380 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.382 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'net.sf.proguard:proguard-base:5.1' in 'maven'
+20:44:31.382 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using net.sf.proguard:proguard-base:5.1 from Maven repository 'maven'
+20:44:31.383 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration net.sf.proguard:proguard-gradle:5.1(runtime).
+20:44:31.384 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency net.sf.proguard:proguard-gradle:5.1(runtime) -> net.sf.proguard:proguard-base:5.1(compile,runtime)
+20:44:31.385 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration net.sf.proguard:proguard-gradle:5.1(master).
+20:44:31.386 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:builder-model:1.0.1(compile).
+20:44:31.387 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:builder-model:1.0.1(runtime).
+20:44:31.388 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:builder-model:1.0.1(runtime) -> com.android.tools:common:24.0.1(runtime)
+20:44:31.389 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:builder-model:1.0.1(master).
+20:44:31.390 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:builder-test-api:1.0.1(compile).
+20:44:31.390 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:builder-test-api:1.0.1(runtime).
+20:44:31.391 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:builder-test-api:1.0.1(runtime) -> com.android.tools.ddms:ddmlib:24.0.1(runtime)
+20:44:31.392 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:builder-test-api:1.0.1(master).
+20:44:31.394 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:sdklib:24.0.1(compile).
+20:44:31.395 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:sdklib:24.0.1(runtime).
+20:44:31.396 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools:sdklib:24.0.1(runtime) -> com.android.tools.layoutlib:layoutlib-api:24.0.1(runtime)
+20:44:31.396 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.android.tools.layoutlib:layoutlib-api:24.0.1
+20:44:31.397 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for com.android.tools.layoutlib:layoutlib-api:24.0.1 using repositories [maven]
+20:44:31.399 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.402 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.android.tools.layoutlib:layoutlib-api:24.0.1' in 'maven'
+20:44:31.402 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using com.android.tools.layoutlib:layoutlib-api:24.0.1 from Maven repository 'maven'
+20:44:31.403 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools:sdklib:24.0.1(runtime) -> com.android.tools:dvlib:24.0.1(runtime)
+20:44:31.404 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.android.tools:dvlib:24.0.1
+20:44:31.405 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for com.android.tools:dvlib:24.0.1 using repositories [maven]
+20:44:31.407 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.409 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.android.tools:dvlib:24.0.1' in 'maven'
+20:44:31.410 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using com.android.tools:dvlib:24.0.1 from Maven repository 'maven'
+20:44:31.412 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools:sdklib:24.0.1(runtime) -> org.apache.commons:commons-compress:1.8.1(runtime)
+20:44:31.413 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.apache.commons:commons-compress:1.8.1
+20:44:31.414 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for org.apache.commons:commons-compress:1.8.1 using repositories [maven]
+20:44:31.416 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.419 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'org.apache.commons:commons-compress:1.8.1' in 'maven'
+20:44:31.419 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using org.apache.commons:commons-compress:1.8.1 from Maven repository 'maven'
+20:44:31.420 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools:sdklib:24.0.1(runtime) -> org.apache.httpcomponents:httpclient:4.1.1(runtime)
+20:44:31.421 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.apache.httpcomponents:httpclient:4.1.1
+20:44:31.422 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for org.apache.httpcomponents:httpclient:4.1.1 using repositories [maven]
+20:44:31.424 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.427 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'org.apache.httpcomponents:httpclient:4.1.1' in 'maven'
+20:44:31.428 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using org.apache.httpcomponents:httpclient:4.1.1 from Maven repository 'maven'
+20:44:31.429 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools:sdklib:24.0.1(runtime) -> org.apache.httpcomponents:httpmime:4.1(runtime)
+20:44:31.430 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.apache.httpcomponents:httpmime:4.1
+20:44:31.430 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for org.apache.httpcomponents:httpmime:4.1 using repositories [maven]
+20:44:31.433 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.437 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'org.apache.httpcomponents:httpmime:4.1' in 'maven'
+20:44:31.438 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using org.apache.httpcomponents:httpmime:4.1 from Maven repository 'maven'
+20:44:31.439 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:sdklib:24.0.1(master).
+20:44:31.439 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:sdk-common:24.0.1(compile).
+20:44:31.440 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:sdk-common:24.0.1(runtime).
+20:44:31.441 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools:sdk-common:24.0.1(runtime) -> com.android.tools:sdklib:24.0.1(runtime)
+20:44:31.442 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools:sdk-common:24.0.1(runtime) -> com.android.tools.build:builder-test-api:1.0.1(runtime)
+20:44:31.442 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:sdk-common:24.0.1(master).
+20:44:31.443 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:common:24.0.1(compile).
+20:44:31.444 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:common:24.0.1(runtime).
+20:44:31.445 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools:common:24.0.1(runtime) -> com.google.guava:guava:17.0(runtime)
+20:44:31.446 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.google.guava:guava:17.0
+20:44:31.447 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for com.google.guava:guava:17.0 using repositories [maven]
+20:44:31.450 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.452 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.google.guava:guava:17.0' in 'maven'
+20:44:31.453 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using com.google.guava:guava:17.0 from Maven repository 'maven'
+20:44:31.453 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:common:24.0.1(master).
+20:44:31.454 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:manifest-merger:24.0.1(compile).
+20:44:31.455 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:manifest-merger:24.0.1(runtime).
+20:44:31.456 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:manifest-merger:24.0.1(runtime) -> com.android.tools:common:24.0.1(runtime)
+20:44:31.457 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:manifest-merger:24.0.1(runtime) -> com.android.tools:sdklib:24.0.1(runtime)
+20:44:31.457 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:manifest-merger:24.0.1(runtime) -> com.android.tools:sdk-common:24.0.1(runtime)
+20:44:31.458 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.build:manifest-merger:24.0.1(runtime) -> net.sf.kxml:kxml2:2.3.0(runtime)
+20:44:31.459 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version net.sf.kxml:kxml2:2.3.0
+20:44:31.460 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for net.sf.kxml:kxml2:2.3.0 using repositories [maven]
+20:44:31.463 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.465 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'net.sf.kxml:kxml2:2.3.0' in 'maven'
+20:44:31.466 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using net.sf.kxml:kxml2:2.3.0 from Maven repository 'maven'
+20:44:31.467 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:manifest-merger:24.0.1(master).
+20:44:31.468 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.ddms:ddmlib:24.0.1(compile).
+20:44:31.468 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.ddms:ddmlib:24.0.1(runtime).
+20:44:31.469 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.ddms:ddmlib:24.0.1(runtime) -> com.android.tools:common:24.0.1(runtime)
+20:44:31.470 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.ddms:ddmlib:24.0.1(runtime) -> net.sf.kxml:kxml2:2.3.0(runtime)
+20:44:31.470 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.ddms:ddmlib:24.0.1(master).
+20:44:31.471 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.squareup:javawriter:2.5.0(compile).
+20:44:31.472 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.squareup:javawriter:2.5.0(runtime).
+20:44:31.473 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.squareup:javawriter:2.5.0(master).
+20:44:31.474 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.bouncycastle:bcpkix-jdk15on:1.48(compile).
+20:44:31.474 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.bouncycastle:bcpkix-jdk15on:1.48(compile) -> org.bouncycastle:bcprov-jdk15on:1.48(compile,runtime)
+20:44:31.475 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.bouncycastle:bcpkix-jdk15on:1.48(runtime).
+20:44:31.476 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.bouncycastle:bcpkix-jdk15on:1.48(runtime) -> org.bouncycastle:bcprov-jdk15on:1.48(compile,runtime)
+20:44:31.477 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.bouncycastle:bcpkix-jdk15on:1.48(master).
+20:44:31.479 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.bouncycastle:bcprov-jdk15on:1.48(compile).
+20:44:31.480 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.bouncycastle:bcprov-jdk15on:1.48(runtime).
+20:44:31.480 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.bouncycastle:bcprov-jdk15on:1.48(master).
+20:44:31.481 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.lint:lint-checks:24.0.1(compile).
+20:44:31.482 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.lint:lint-checks:24.0.1(runtime).
+20:44:31.482 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.lint:lint-checks:24.0.1(runtime) -> com.android.tools.lint:lint-api:24.0.1(runtime)
+20:44:31.483 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.android.tools.lint:lint-api:24.0.1
+20:44:31.484 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for com.android.tools.lint:lint-api:24.0.1 using repositories [maven]
+20:44:31.486 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.490 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.android.tools.lint:lint-api:24.0.1' in 'maven'
+20:44:31.490 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using com.android.tools.lint:lint-api:24.0.1 from Maven repository 'maven'
+20:44:31.492 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.lint:lint-checks:24.0.1(runtime) -> org.ow2.asm:asm-analysis:4.0(runtime)
+20:44:31.492 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.ow2.asm:asm-analysis:4.0
+20:44:31.493 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for org.ow2.asm:asm-analysis:4.0 using repositories [maven]
+20:44:31.496 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.499 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'org.ow2.asm:asm-analysis:4.0' in 'maven'
+20:44:31.499 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using org.ow2.asm:asm-analysis:4.0 from Maven repository 'maven'
+20:44:31.500 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.lint:lint-checks:24.0.1(master).
+20:44:31.501 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.eclipse.jdt.core.compiler:ecj:4.2.2(compile).
+20:44:31.501 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.eclipse.jdt.core.compiler:ecj:4.2.2(runtime).
+20:44:31.502 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.eclipse.jdt.core.compiler:ecj:4.2.2(master).
+20:44:31.503 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration net.sf.proguard:proguard-base:5.1(compile).
+20:44:31.503 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration net.sf.proguard:proguard-base:5.1(master).
+20:44:31.504 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration net.sf.proguard:proguard-base:5.1(runtime).
+20:44:31.505 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.layoutlib:layoutlib-api:24.0.1(compile).
+20:44:31.505 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.layoutlib:layoutlib-api:24.0.1(runtime).
+20:44:31.506 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.layoutlib:layoutlib-api:24.0.1(runtime) -> com.android.tools:common:24.0.1(runtime)
+20:44:31.507 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.layoutlib:layoutlib-api:24.0.1(runtime) -> net.sf.kxml:kxml2:2.3.0(runtime)
+20:44:31.508 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.layoutlib:layoutlib-api:24.0.1(master).
+20:44:31.508 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:dvlib:24.0.1(compile).
+20:44:31.509 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:dvlib:24.0.1(runtime).
+20:44:31.510 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools:dvlib:24.0.1(runtime) -> com.android.tools:common:24.0.1(runtime)
+20:44:31.510 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:dvlib:24.0.1(master).
+20:44:31.511 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.apache.commons:commons-compress:1.8.1(compile).
+20:44:31.512 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.apache.commons:commons-compress:1.8.1(runtime).
+20:44:31.512 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.apache.commons:commons-compress:1.8.1(master).
+20:44:31.513 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.apache.httpcomponents:httpclient:4.1.1(compile).
+20:44:31.514 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.apache.httpcomponents:httpclient:4.1.1(compile) -> org.apache.httpcomponents:httpcore:4.1(compile,runtime)
+20:44:31.514 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.apache.httpcomponents:httpcore:4.1
+20:44:31.515 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for org.apache.httpcomponents:httpcore:4.1 using repositories [maven]
+20:44:31.518 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.521 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'org.apache.httpcomponents:httpcore:4.1' in 'maven'
+20:44:31.522 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using org.apache.httpcomponents:httpcore:4.1 from Maven repository 'maven'
+20:44:31.523 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.apache.httpcomponents:httpclient:4.1.1(compile) -> commons-logging:commons-logging:1.1.1(compile,runtime)
+20:44:31.524 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version commons-logging:commons-logging:1.1.1
+20:44:31.525 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for commons-logging:commons-logging:1.1.1 using repositories [maven]
+20:44:31.527 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.531 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'commons-logging:commons-logging:1.1.1' in 'maven'
+20:44:31.531 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using commons-logging:commons-logging:1.1.1 from Maven repository 'maven'
+20:44:31.533 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.apache.httpcomponents:httpclient:4.1.1(compile) -> commons-codec:commons-codec:1.4(compile,runtime)
+20:44:31.533 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version commons-codec:commons-codec:1.4
+20:44:31.534 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for commons-codec:commons-codec:1.4 using repositories [maven]
+20:44:31.536 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.538 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'commons-codec:commons-codec:1.4' in 'maven'
+20:44:31.539 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using commons-codec:commons-codec:1.4 from Maven repository 'maven'
+20:44:31.540 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.apache.httpcomponents:httpclient:4.1.1(runtime).
+20:44:31.541 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.apache.httpcomponents:httpclient:4.1.1(runtime) -> org.apache.httpcomponents:httpcore:4.1(compile,runtime)
+20:44:31.541 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.apache.httpcomponents:httpclient:4.1.1(runtime) -> commons-logging:commons-logging:1.1.1(compile,runtime)
+20:44:31.542 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.apache.httpcomponents:httpclient:4.1.1(runtime) -> commons-codec:commons-codec:1.4(compile,runtime)
+20:44:31.543 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.apache.httpcomponents:httpclient:4.1.1(master).
+20:44:31.543 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.apache.httpcomponents:httpmime:4.1(compile).
+20:44:31.544 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.apache.httpcomponents:httpmime:4.1(compile) -> org.apache.httpcomponents:httpcore:4.1(compile,runtime)
+20:44:31.545 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.apache.httpcomponents:httpmime:4.1(compile) -> commons-logging:commons-logging:1.1.1(compile,runtime)
+20:44:31.546 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.apache.httpcomponents:httpmime:4.1(runtime).
+20:44:31.546 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.apache.httpcomponents:httpmime:4.1(runtime) -> org.apache.httpcomponents:httpcore:4.1(compile,runtime)
+20:44:31.547 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.apache.httpcomponents:httpmime:4.1(runtime) -> commons-logging:commons-logging:1.1.1(compile,runtime)
+20:44:31.548 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.apache.httpcomponents:httpmime:4.1(master).
+20:44:31.548 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:sdklib:24.0.1(compile).
+20:44:31.549 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.android.tools:sdklib:24.0.1(compile) selects same versions as previous traversal. ignoring
+20:44:31.550 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:sdklib:24.0.1(runtime).
+20:44:31.550 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.android.tools:sdklib:24.0.1(runtime) selects same versions as previous traversal. ignoring
+20:44:31.551 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:sdklib:24.0.1(master).
+20:44:31.551 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.android.tools:sdklib:24.0.1(master) selects same versions as previous traversal. ignoring
+20:44:31.552 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:builder-test-api:1.0.1(compile).
+20:44:31.553 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.android.tools.build:builder-test-api:1.0.1(compile) selects same versions as previous traversal. ignoring
+20:44:31.553 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:builder-test-api:1.0.1(runtime).
+20:44:31.554 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.android.tools.build:builder-test-api:1.0.1(runtime) selects same versions as previous traversal. ignoring
+20:44:31.554 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:builder-test-api:1.0.1(master).
+20:44:31.555 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.android.tools.build:builder-test-api:1.0.1(master) selects same versions as previous traversal. ignoring
+20:44:31.556 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.google.guava:guava:17.0(compile).
+20:44:31.557 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.google.guava:guava:17.0(runtime).
+20:44:31.558 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.google.guava:guava:17.0(master).
+20:44:31.558 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:common:24.0.1(compile).
+20:44:31.559 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.android.tools:common:24.0.1(compile) selects same versions as previous traversal. ignoring
+20:44:31.560 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:common:24.0.1(runtime).
+20:44:31.560 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.android.tools:common:24.0.1(runtime) selects same versions as previous traversal. ignoring
+20:44:31.561 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:common:24.0.1(master).
+20:44:31.561 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.android.tools:common:24.0.1(master) selects same versions as previous traversal. ignoring
+20:44:31.562 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:sdk-common:24.0.1(compile).
+20:44:31.564 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.android.tools:sdk-common:24.0.1(compile) selects same versions as previous traversal. ignoring
+20:44:31.565 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:sdk-common:24.0.1(runtime).
+20:44:31.565 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.android.tools:sdk-common:24.0.1(runtime) selects same versions as previous traversal. ignoring
+20:44:31.566 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:sdk-common:24.0.1(master).
+20:44:31.566 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.android.tools:sdk-common:24.0.1(master) selects same versions as previous traversal. ignoring
+20:44:31.567 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration net.sf.kxml:kxml2:2.3.0(compile).
+20:44:31.567 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration net.sf.kxml:kxml2:2.3.0(runtime).
+20:44:31.568 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration net.sf.kxml:kxml2:2.3.0(master).
+20:44:31.569 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.lint:lint-api:24.0.1(compile).
+20:44:31.569 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.lint:lint-api:24.0.1(runtime).
+20:44:31.570 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.lint:lint-api:24.0.1(runtime) -> com.android.tools:sdk-common:24.0.1(runtime)
+20:44:31.571 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.lint:lint-api:24.0.1(runtime) -> com.android.tools.build:builder-model:1.0.1(runtime)
+20:44:31.571 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.lint:lint-api:24.0.1(runtime) -> com.android.tools.external.lombok:lombok-ast:0.2.2(runtime)
+20:44:31.572 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version com.android.tools.external.lombok:lombok-ast:0.2.2
+20:44:31.573 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for com.android.tools.external.lombok:lombok-ast:0.2.2 using repositories [maven]
+20:44:31.576 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.580 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'com.android.tools.external.lombok:lombok-ast:0.2.2' in 'maven'
+20:44:31.581 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using com.android.tools.external.lombok:lombok-ast:0.2.2 from Maven repository 'maven'
+20:44:31.582 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.lint:lint-api:24.0.1(runtime) -> org.ow2.asm:asm:4.0(runtime)
+20:44:31.583 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.ow2.asm:asm:4.0
+20:44:31.583 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for org.ow2.asm:asm:4.0 using repositories [maven]
+20:44:31.588 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.591 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'org.ow2.asm:asm:4.0' in 'maven'
+20:44:31.591 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using org.ow2.asm:asm:4.0 from Maven repository 'maven'
+20:44:31.593 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.lint:lint-api:24.0.1(runtime) -> org.ow2.asm:asm-tree:4.0(runtime)
+20:44:31.594 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.ow2.asm:asm-tree:4.0
+20:44:31.595 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for org.ow2.asm:asm-tree:4.0 using repositories [maven]
+20:44:31.599 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:31.601 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'org.ow2.asm:asm-tree:4.0' in 'maven'
+20:44:31.602 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using org.ow2.asm:asm-tree:4.0 from Maven repository 'maven'
+20:44:31.603 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.lint:lint-api:24.0.1(master).
+20:44:31.604 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.ow2.asm:asm-analysis:4.0(compile).
+20:44:31.608 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.ow2.asm:asm-analysis:4.0(compile) -> org.ow2.asm:asm-tree:4.0(compile,runtime)
+20:44:31.608 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.ow2.asm:asm-analysis:4.0(runtime).
+20:44:31.609 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.ow2.asm:asm-analysis:4.0(runtime) -> org.ow2.asm:asm-tree:4.0(compile,runtime)
+20:44:31.610 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.ow2.asm:asm-analysis:4.0(master).
+20:44:31.610 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.apache.httpcomponents:httpcore:4.1(compile).
+20:44:31.611 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.apache.httpcomponents:httpcore:4.1(master).
+20:44:31.612 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration commons-logging:commons-logging:1.1.1(compile).
+20:44:31.613 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration commons-logging:commons-logging:1.1.1(master).
+20:44:31.614 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration commons-codec:commons-codec:1.4(compile).
+20:44:31.614 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration commons-codec:commons-codec:1.4(master).
+20:44:31.615 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.apache.httpcomponents:httpcore:4.1(runtime).
+20:44:31.616 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration commons-logging:commons-logging:1.1.1(runtime).
+20:44:31.616 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration commons-codec:commons-codec:1.4(runtime).
+20:44:31.617 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:sdk-common:24.0.1(compile).
+20:44:31.618 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.android.tools:sdk-common:24.0.1(compile) selects same versions as previous traversal. ignoring
+20:44:31.618 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:sdk-common:24.0.1(runtime).
+20:44:31.620 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.android.tools:sdk-common:24.0.1(runtime) selects same versions as previous traversal. ignoring
+20:44:31.622 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools:sdk-common:24.0.1(master).
+20:44:31.623 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.android.tools:sdk-common:24.0.1(master) selects same versions as previous traversal. ignoring
+20:44:31.624 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:builder-model:1.0.1(compile).
+20:44:31.624 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.android.tools.build:builder-model:1.0.1(compile) selects same versions as previous traversal. ignoring
+20:44:31.625 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:builder-model:1.0.1(runtime).
+20:44:31.626 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.android.tools.build:builder-model:1.0.1(runtime) selects same versions as previous traversal. ignoring
+20:44:31.626 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.build:builder-model:1.0.1(master).
+20:44:31.627 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for com.android.tools.build:builder-model:1.0.1(master) selects same versions as previous traversal. ignoring
+20:44:31.628 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.external.lombok:lombok-ast:0.2.2(compile).
+20:44:31.629 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.external.lombok:lombok-ast:0.2.2(compile) -> com.google.guava:guava:15.0(compile,runtime)
+20:44:31.631 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Found new conflicting module version com.google.guava:guava:15.0
+20:44:31.632 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.external.lombok:lombok-ast:0.2.2(runtime).
+20:44:31.633 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency com.android.tools.external.lombok:lombok-ast:0.2.2(runtime) -> com.google.guava:guava:15.0(compile,runtime)
+20:44:31.633 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.android.tools.external.lombok:lombok-ast:0.2.2(master).
+20:44:31.634 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.ow2.asm:asm:4.0(compile).
+20:44:31.635 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.ow2.asm:asm:4.0(runtime).
+20:44:31.635 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.ow2.asm:asm:4.0(master).
+20:44:31.636 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.ow2.asm:asm-tree:4.0(compile).
+20:44:31.637 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.ow2.asm:asm-tree:4.0(compile) -> org.ow2.asm:asm:4.0(compile,runtime)
+20:44:31.639 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.ow2.asm:asm-tree:4.0(runtime).
+20:44:31.640 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.ow2.asm:asm-tree:4.0(runtime) -> org.ow2.asm:asm:4.0(compile,runtime)
+20:44:31.641 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.ow2.asm:asm-tree:4.0(master).
+20:44:31.642 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.ow2.asm:asm:4.0(compile).
+20:44:31.642 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for org.ow2.asm:asm:4.0(compile) selects same versions as previous traversal. ignoring
+20:44:31.643 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.ow2.asm:asm:4.0(master).
+20:44:31.643 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for org.ow2.asm:asm:4.0(master) selects same versions as previous traversal. ignoring
+20:44:31.644 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.ow2.asm:asm:4.0(runtime).
+20:44:31.645 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Changed edges for org.ow2.asm:asm:4.0(runtime) selects same versions as previous traversal. ignoring
+20:44:31.649 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.conflicts.DefaultConflictHandler] Selected com.google.guava:guava:17.0 from conflicting modules [com.google.guava:guava:17.0, com.google.guava:guava:15.0].
+20:44:31.650 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.google.guava:guava:17.0(compile).
+20:44:31.651 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.google.guava:guava:17.0(runtime).
+20:44:31.652 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration com.google.guava:guava:17.0(master).
+20:44:31.679 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.oldresult.TransientConfigurationResultsBuilder] Flushing resolved configuration data in Binary store in /private/var/folders/r1/25k3rfyd61b_4c23628p2ysr0000gn/T/gradle6549746202391408836.bin. Wrote root :GradleLicensePlexus:unspecified:classpath.
+20:44:31.699 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache artifact-at-repository.bin (/Users/mak/.gradle/caches/modules-2/metadata-2.15/artifact-at-repository.bin)
+20:44:31.704 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'license-gradle-plugin.jar (gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.12.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/gradle.plugin.nl.javadude.gradle.plugins/license-gradle-plugin/0.12.1/20c27ebe948b81c2103f1e9349114ddd7785e649/license-gradle-plugin-0.12.1.jar
+20:44:31.705 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'plexus-utils.jar (org.codehaus.plexus:plexus-utils:2.0.5)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-utils/2.0.5/7841ba10ea46c9611ce702c3833ff9fccc8ae6eb/plexus-utils-2.0.5.jar
+20:44:31.706 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'xmltool.jar (com.mycila.xmltool:xmltool:3.3)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.mycila.xmltool/xmltool/3.3/b45958476a332904c1152eb590bd4764dea5dc6d/xmltool-3.3.jar
+20:44:31.707 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'maven-license-plugin.jar (com.mycila.maven-license-plugin:maven-license-plugin:1.10.b1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.mycila.maven-license-plugin/maven-license-plugin/1.10.b1/f2c4f13c8d30e7305f3407bd4e3980f2eed8d1cf/maven-license-plugin-1.10.b1.jar
+20:44:31.708 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'gradle.jar (com.android.tools.build:gradle:1.0.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.android.tools.build/gradle/1.0.1/cd1ae9a4b885e8f07572d0f894f149533c082cc8/gradle-1.0.1.jar
+20:44:31.709 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'builder.jar (com.android.tools.build:builder:1.0.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/1.0.1/c8d3894bf14b2754a94b5091a4a4bd84ea0aa6fc/builder-1.0.1.jar
+20:44:31.710 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'lint.jar (com.android.tools.lint:lint:24.0.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint/24.0.1/d014feecb7c9f4a4bba61b056ff9251c5279df24/lint-24.0.1.jar
+20:44:31.711 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'proguard-gradle.jar (net.sf.proguard:proguard-gradle:5.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-gradle/5.1/672d43cbfde4765080e5bea19c51a2cc45dfc00/proguard-gradle-5.1.jar
+20:44:31.712 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'builder-model.jar (com.android.tools.build:builder-model:1.0.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-model/1.0.1/e48e9a3058bb3a9813248cc79bd64e0c211faa5/builder-model-1.0.1.jar
+20:44:31.712 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'builder-test-api.jar (com.android.tools.build:builder-test-api:1.0.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder-test-api/1.0.1/ad1ed006cd1432f84d6018cae5b6c289f8b9a592/builder-test-api-1.0.1.jar
+20:44:31.713 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'sdklib.jar (com.android.tools:sdklib:24.0.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.android.tools/sdklib/24.0.1/129cb79134719e5e271e9a5d02dda97e359767a7/sdklib-24.0.1.jar
+20:44:31.714 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'sdk-common.jar (com.android.tools:sdk-common:24.0.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.android.tools/sdk-common/24.0.1/78443e0d8bc5fd15ac02a4207752c990969ea32c/sdk-common-24.0.1.jar
+20:44:31.715 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'common.jar (com.android.tools:common:24.0.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.android.tools/common/24.0.1/96a3273bdb7dd2babc6b7469c43a6bedb87fb1bf/common-24.0.1.jar
+20:44:31.716 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'manifest-merger.jar (com.android.tools.build:manifest-merger:24.0.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/24.0.1/42055d1aaf4b93dbfebfaea3a4fc2f33f76360df/manifest-merger-24.0.1.jar
+20:44:31.717 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'ddmlib.jar (com.android.tools.ddms:ddmlib:24.0.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/24.0.1/96e5bff5e7352c0d4252a34d00e9fe4e1b9a9a60/ddmlib-24.0.1.jar
+20:44:31.718 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'javawriter.jar (com.squareup:javawriter:2.5.0)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.5.0/81241ff7078ef14f42ea2a8995fa09c096256e6b/javawriter-2.5.0.jar
+20:44:31.719 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'bcpkix-jdk15on.jar (org.bouncycastle:bcpkix-jdk15on:1.48)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.48/28b7614b908a47844bb27e3c94b45b6893656265/bcpkix-jdk15on-1.48.jar
+20:44:31.721 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'bcprov-jdk15on.jar (org.bouncycastle:bcprov-jdk15on:1.48)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.48/960dea7c9181ba0b17e8bab0c06a43f0a5f04e65/bcprov-jdk15on-1.48.jar
+20:44:31.722 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'lint-checks.jar (com.android.tools.lint:lint-checks:24.0.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-checks/24.0.1/5852425e83bbf45642eb4c105999f3873c85321a/lint-checks-24.0.1.jar
+20:44:31.723 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'ecj.jar (org.eclipse.jdt.core.compiler:ecj:4.2.2)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/org.eclipse.jdt.core.compiler/ecj/4.2.2/d9fd79499c664bccaf24dbe04be417de6c6af64a/ecj-4.2.2.jar
+20:44:31.724 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'proguard-base.jar (net.sf.proguard:proguard-base:5.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/net.sf.proguard/proguard-base/5.1/dc606dd778fe4685be16d5a171782ccfe0ef5637/proguard-base-5.1.jar
+20:44:31.725 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'layoutlib-api.jar (com.android.tools.layoutlib:layoutlib-api:24.0.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-api/24.0.1/99e81aa1d57c4a2764e3159ecaeb2c3d87e2adb1/layoutlib-api-24.0.1.jar
+20:44:31.726 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'dvlib.jar (com.android.tools:dvlib:24.0.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.android.tools/dvlib/24.0.1/88956eb2faa213e7ecba20d42ea814ad23ccb25a/dvlib-24.0.1.jar
+20:44:31.727 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'commons-compress.jar (org.apache.commons:commons-compress:1.8.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.8.1/a698750c16740fd5b3871425f4cb3bbaa87f529d/commons-compress-1.8.1.jar
+20:44:31.728 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'httpclient.jar (org.apache.httpcomponents:httpclient:4.1.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.1.1/3d1d918f32709e33ba7ddb2c4e8d1c543ebe713e/httpclient-4.1.1.jar
+20:44:31.729 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'httpmime.jar (org.apache.httpcomponents:httpmime:4.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.1/9ba2dcdf94ce35c8a8e9bff242db0618ca932e92/httpmime-4.1.jar
+20:44:31.729 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'guava.jar (com.google.guava:guava:17.0)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/17.0/9c6ef172e8de35fd8d4d8783e4821e57cdef7445/guava-17.0.jar
+20:44:31.730 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'kxml2.jar (net.sf.kxml:kxml2:2.3.0)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/net.sf.kxml/kxml2/2.3.0/ccbc77a5fd907ef863c29f3596c6f54ffa4e9442/kxml2-2.3.0.jar
+20:44:31.731 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'lint-api.jar (com.android.tools.lint:lint-api:24.0.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.android.tools.lint/lint-api/24.0.1/dabee09e35f6947d639127efc5a17cba76901bd4/lint-api-24.0.1.jar
+20:44:31.733 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'asm-analysis.jar (org.ow2.asm:asm-analysis:4.0)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/4.0/1c45d52b6f6c638db13cf3ac12adeb56b254cdd7/asm-analysis-4.0.jar
+20:44:31.734 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'httpcore.jar (org.apache.httpcomponents:httpcore:4.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.1/33fc26c02f8043ab0ede19eadc8c9885386b255c/httpcore-4.1.jar
+20:44:31.735 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'commons-logging.jar (commons-logging:commons-logging:1.1.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.1/5043bfebc3db072ed80fbd362e7caf00e885d8ae/commons-logging-1.1.1.jar
+20:44:31.736 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'commons-codec.jar (commons-codec:commons-codec:1.4)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.4/4216af16d38465bbab0f3dff8efa14204f7a399a/commons-codec-1.4.jar
+20:44:31.737 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'lombok-ast.jar (com.android.tools.external.lombok:lombok-ast:0.2.2)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/com.android.tools.external.lombok/lombok-ast/0.2.2/57e560b535ceaa14fb6f15422d74594acd6c5b64/lombok-ast-0.2.2.jar
+20:44:31.737 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'asm.jar (org.ow2.asm:asm:4.0)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/4.0/659add6efc75a4715d738e73f07505246edf4d66/asm-4.0.jar
+20:44:31.738 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'asm-tree.jar (org.ow2.asm:asm-tree:4.0)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/4.0/67bd266cd17adcee486b76952ece4cc85fe248b8/asm-tree-4.0.jar
+20:44:31.994 [INFO] [nl.javadude.gradle.plugins.license.LicensePlugin] Adding license extension
+20:44:32.038 [INFO] [nl.javadude.gradle.plugins.license.LicensePlugin] Adding download licenses extension
+20:44:32.102 [INFO] [org.gradle.api.Task] Applying defaults to download task: :downloadLicenses
+20:44:32.116 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on proj class cache for build file '/Users/mak/projects/GradleLicensePlexus/build.gradle' (/Users/mak/.gradle/caches/2.7/scripts/build_1dnwxyfgpqf632tuuarmvb51c/proj).
+20:44:32.117 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+20:44:32.294 [INFO] [nl.javadude.gradle.plugins.license.LicensePlugin] Adding license extension rule
+20:44:32.573 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks.check' from state Known to GraphClosed
+20:44:32.574 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element 'tasks.check' creator rule action tasks.addPlaceholderAction(check)
+20:44:32.575 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Creating tasks.check using tasks.addPlaceholderAction(check)
+20:44:32.576 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks.check' to state Created.
+20:44:32.577 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks.check' to state DefaultsApplied.
+20:44:32.577 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks.check' to state Initialized.
+20:44:32.578 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element 'tasks.check' rule action copyToTaskContainer
+20:44:32.579 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Mutating tasks.check using copyToTaskContainer
+20:44:32.580 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks.check' to state Mutated.
+20:44:32.581 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks.check' to state Finalized.
+20:44:32.581 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks.check' to state SelfClosed.
+20:44:32.582 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks.check' to state GraphClosed.
+20:44:32.582 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks.check' from state GraphClosed to GraphClosed
+20:44:32.659 [DEBUG] [org.gradle.configuration.project.BuildScriptProcessor] Timing: Running the build script took 2.238 secs
+20:44:32.692 [INFO] [nl.javadude.gradle.plugins.license.LicensePlugin] Adding license tasks for sourceSet licenseMain
+20:44:32.732 [INFO] [org.gradle.api.Task] Applying license defaults to task: :licenseMain
+20:44:32.763 [INFO] [org.gradle.api.Task] Applying license defaults to task: :licenseFormatMain
+20:44:32.765 [INFO] [nl.javadude.gradle.plugins.license.LicensePlugin] Adding license tasks for sourceSet licenseTest
+20:44:32.767 [INFO] [org.gradle.api.Task] Applying license defaults to task: :licenseTest
+20:44:32.770 [INFO] [org.gradle.api.Task] Applying license defaults to task: :licenseFormatTest
+20:44:32.773 [INFO] [org.gradle.BuildLogger] All projects evaluated.
+20:44:32.786 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks' from state Created to SelfClosed
+20:44:32.787 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks' to state DefaultsApplied.
+20:44:32.787 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks' to state Initialized.
+20:44:32.788 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element 'binaries' creator rule action LanguageBasePlugin.apply()
+20:44:32.789 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Creating binaries using LanguageBasePlugin.apply()
+20:44:32.790 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries' to state Created.
+20:44:32.791 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element 'binaries' rule action LanguageBasePlugin.apply()
+20:44:32.791 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Mutating binaries using LanguageBasePlugin.apply()
+20:44:32.807 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element '__binarySpecFactoryRegistry' creator rule action LanguageBasePlugin.apply()
+20:44:32.807 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Creating __binarySpecFactoryRegistry using LanguageBasePlugin.apply()
+20:44:32.808 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element '__binarySpecFactoryRegistry' to state Created.
+20:44:32.809 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element '__binarySpecFactoryRegistry' to state DefaultsApplied.
+20:44:32.809 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element '__binarySpecFactoryRegistry' to state Initialized.
+20:44:32.810 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element '__binarySpecFactoryRegistry' to state Mutated.
+20:44:32.812 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element '__binarySpecFactoryRegistry' to state Finalized.
+20:44:32.812 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element '__binarySpecFactoryRegistry' to state SelfClosed.
+20:44:32.813 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element '__binarySpecFactoryRegistry' to state GraphClosed.
+20:44:32.814 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element 'binaries' rule action LanguageBasePlugin.Rules#registerBinaryFactories
+20:44:32.814 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Mutating binaries using LanguageBasePlugin.Rules#registerBinaryFactories
+20:44:32.816 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries' to state DefaultsApplied.
+20:44:32.817 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries' to state Initialized.
+20:44:32.818 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries' to state Mutated.
+20:44:32.818 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries' to state Finalized.
+20:44:32.819 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries' to state SelfClosed.
+20:44:32.820 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element 'binaries.mainClasses' creator rule action LanguageBasePlugin.apply().mainClasses()
+20:44:32.820 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Creating binaries.mainClasses using LanguageBasePlugin.apply().mainClasses()
+20:44:32.821 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.mainClasses' to state Created.
+20:44:32.822 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element 'binaries.mainClasses' rule action LanguageBasePlugin.apply()
+20:44:32.822 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Mutating binaries.mainClasses using LanguageBasePlugin.apply()
+20:44:32.824 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.mainClasses' to state DefaultsApplied.
+20:44:32.824 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.mainClasses' to state Initialized.
+20:44:32.825 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.mainClasses' to state Mutated.
+20:44:32.825 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element 'taskFactory' creator rule action Project.<init>.taskFactory
+20:44:32.826 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Creating taskFactory using Project.<init>.taskFactory
+20:44:32.827 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'taskFactory' to state Created.
+20:44:32.827 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'taskFactory' to state DefaultsApplied.
+20:44:32.828 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'taskFactory' to state Initialized.
+20:44:32.828 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'taskFactory' to state Mutated.
+20:44:32.829 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'taskFactory' to state Finalized.
+20:44:32.830 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'taskFactory' to state SelfClosed.
+20:44:32.830 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'taskFactory' to state GraphClosed.
+20:44:32.831 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element 'binaries.mainClasses' rule action LanguageBasePlugin.apply()
+20:44:32.831 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Mutating binaries.mainClasses using LanguageBasePlugin.apply()
+20:44:32.833 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.mainClasses' to state Finalized.
+20:44:32.834 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.mainClasses' to state SelfClosed.
+20:44:32.834 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element 'binaries.mainClasses.tasks' creator rule action LanguageBasePlugin.apply().mainClasses().tasks()
+20:44:32.835 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Creating binaries.mainClasses.tasks using LanguageBasePlugin.apply().mainClasses().tasks()
+20:44:32.836 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.mainClasses.tasks' to state Created.
+20:44:32.836 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.mainClasses.tasks' to state DefaultsApplied.
+20:44:32.837 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.mainClasses.tasks' to state Initialized.
+20:44:32.837 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.mainClasses.tasks' to state Mutated.
+20:44:32.838 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.mainClasses.tasks' to state Finalized.
+20:44:32.839 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.mainClasses.tasks' to state SelfClosed.
+20:44:32.839 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.mainClasses.tasks' to state GraphClosed.
+20:44:32.840 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.mainClasses' to state GraphClosed.
+20:44:32.840 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element 'binaries.testClasses' creator rule action LanguageBasePlugin.apply().testClasses()
+20:44:32.841 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Creating binaries.testClasses using LanguageBasePlugin.apply().testClasses()
+20:44:32.842 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.testClasses' to state Created.
+20:44:32.842 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element 'binaries.testClasses' rule action LanguageBasePlugin.apply()
+20:44:32.843 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Mutating binaries.testClasses using LanguageBasePlugin.apply()
+20:44:32.844 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.testClasses' to state DefaultsApplied.
+20:44:32.844 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.testClasses' to state Initialized.
+20:44:32.845 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.testClasses' to state Mutated.
+20:44:32.845 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element 'binaries.testClasses' rule action LanguageBasePlugin.apply()
+20:44:32.846 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Mutating binaries.testClasses using LanguageBasePlugin.apply()
+20:44:32.847 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.testClasses' to state Finalized.
+20:44:32.848 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.testClasses' to state SelfClosed.
+20:44:32.848 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element 'binaries.testClasses.tasks' creator rule action LanguageBasePlugin.apply().testClasses().tasks()
+20:44:32.849 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Creating binaries.testClasses.tasks using LanguageBasePlugin.apply().testClasses().tasks()
+20:44:32.850 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.testClasses.tasks' to state Created.
+20:44:32.850 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.testClasses.tasks' to state DefaultsApplied.
+20:44:32.851 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.testClasses.tasks' to state Initialized.
+20:44:32.852 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.testClasses.tasks' to state Mutated.
+20:44:32.852 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.testClasses.tasks' to state Finalized.
+20:44:32.853 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.testClasses.tasks' to state SelfClosed.
+20:44:32.853 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.testClasses.tasks' to state GraphClosed.
+20:44:32.854 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries.testClasses' to state GraphClosed.
+20:44:32.855 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'binaries' to state GraphClosed.
+20:44:32.856 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element 'tasks' rule action LanguageBasePlugin.Rules#copyBinaryTasksToTaskContainer
+20:44:32.857 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Mutating tasks using LanguageBasePlugin.Rules#copyBinaryTasksToTaskContainer
+20:44:32.859 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks' to state Mutated.
+20:44:32.859 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks' to state Finalized.
+20:44:32.860 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks' to state SelfClosed.
+20:44:32.861 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks.downloadLicenses' from state Known to GraphClosed
+20:44:32.862 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element 'tasks.downloadLicenses' creator rule action Project.<init>.tasks.downloadLicenses()
+20:44:32.863 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Creating tasks.downloadLicenses using Project.<init>.tasks.downloadLicenses()
+20:44:32.863 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks.downloadLicenses' to state Created.
+20:44:32.864 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks.downloadLicenses' to state DefaultsApplied.
+20:44:32.864 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks.downloadLicenses' to state Initialized.
+20:44:32.865 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Running model element 'tasks.downloadLicenses' rule action copyToTaskContainer
+20:44:32.866 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Mutating tasks.downloadLicenses using copyToTaskContainer
+20:44:32.866 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks.downloadLicenses' to state Mutated.
+20:44:32.867 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks.downloadLicenses' to state Finalized.
+20:44:32.868 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks.downloadLicenses' to state SelfClosed.
+20:44:32.868 [DEBUG] [org.gradle.model.internal.registry.DefaultModelRegistry] Transitioning model element 'tasks.downloadLicenses' to state GraphClosed.
+20:44:32.870 [INFO] [org.gradle.execution.TaskNameResolvingBuildConfigurationAction] Selected primary task 'downloadLicenses' from project :
+20:44:32.873 [DEBUG] [org.gradle.execution.taskgraph.DefaultTaskGraphExecuter] Timing: Creating the DAG took 0.003 secs
+20:44:32.876 [INFO] [org.gradle.BuildLogger] Tasks to be executed: [task ':downloadLicenses']
+20:44:32.901 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :downloadLicenses (Thread[main,5,main]) started.
+20:44:32.903 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :downloadLicenses
+20:44:32.904 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Starting to execute task ':downloadLicenses'
+20:44:32.910 [DEBUG] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Determining if task ':downloadLicenses' is up-to-date
+20:44:32.913 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on task history cache (/Users/mak/projects/GradleLicensePlexus/.gradle/2.7/taskArtifacts).
+20:44:32.914 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired.
+20:44:32.915 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache taskArtifacts.bin (/Users/mak/projects/GradleLicensePlexus/.gradle/2.7/taskArtifacts/taskArtifacts.bin)
+20:44:32.927 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Opening cache outputFileStates.bin (/Users/mak/projects/GradleLicensePlexus/.gradle/2.7/taskArtifacts/outputFileStates.bin)
+20:44:32.952 [INFO] [org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter] Executing task ':downloadLicenses' (up-to-date check took 0.04 secs) due to:
+  No history is available.
+20:44:32.952 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter] Executing actions for task ':downloadLicenses'.
+20:44:33.013 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DefaultArtifactDependencyResolver] Resolving configuration ':compile'
+20:44:33.015 [DEBUG] [org.gradle.internal.resource.transport.http.JavaSystemPropertiesProxySettings] Found java system property 'http.nonProxyHosts': local|*.local|169.254/16|*.169.254/16. Will ignore proxy settings for these hosts.
+20:44:33.016 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] Creating new in-memory cache for repo 'MavenRepo' [4471c3b2f5ea2d40ffaa8b3948cdbacd].
+20:44:33.018 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration :GradleLicensePlexus:unspecified(compile).
+20:44:33.018 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency :GradleLicensePlexus:unspecified(compile) -> org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1(compile)
+20:44:33.019 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1
+20:44:33.019 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1 using repositories [MavenRepo]
+20:44:33.021 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:33.024 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1' in 'MavenRepo'
+20:44:33.024 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1 from Maven repository 'MavenRepo'
+20:44:33.025 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1(default).
+20:44:33.026 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1(default) -> junit:junit:3.8.1(compile,runtime)
+20:44:33.026 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version junit:junit:3.8.1
+20:44:33.027 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for junit:junit:3.8.1 using repositories [MavenRepo]
+20:44:33.029 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:33.032 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'junit:junit:3.8.1' in 'MavenRepo'
+20:44:33.032 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using junit:junit:3.8.1 from Maven repository 'MavenRepo'
+20:44:33.033 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1(default) -> org.codehaus.plexus:plexus-utils:1.0.4(compile,runtime)
+20:44:33.033 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.codehaus.plexus:plexus-utils:1.0.4
+20:44:33.034 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for org.codehaus.plexus:plexus-utils:1.0.4 using repositories [MavenRepo]
+20:44:33.036 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:33.040 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'org.codehaus.plexus:plexus-utils:1.0.4' in 'MavenRepo'
+20:44:33.040 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using org.codehaus.plexus:plexus-utils:1.0.4 from Maven repository 'MavenRepo'
+20:44:33.041 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1(default) -> classworlds:classworlds:1.1-alpha-2(compile,runtime)
+20:44:33.042 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version classworlds:classworlds:1.1-alpha-2
+20:44:33.042 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for classworlds:classworlds:1.1-alpha-2 using repositories [MavenRepo]
+20:44:33.044 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:33.048 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'classworlds:classworlds:1.1-alpha-2' in 'MavenRepo'
+20:44:33.049 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using classworlds:classworlds:1.1-alpha-2 from Maven repository 'MavenRepo'
+20:44:33.049 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration junit:junit:3.8.1(compile).
+20:44:33.050 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration junit:junit:3.8.1(master).
+20:44:33.050 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration junit:junit:3.8.1(runtime).
+20:44:33.051 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.codehaus.plexus:plexus-utils:1.0.4(compile).
+20:44:33.051 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.codehaus.plexus:plexus-utils:1.0.4(master).
+20:44:33.052 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.codehaus.plexus:plexus-utils:1.0.4(runtime).
+20:44:33.053 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration classworlds:classworlds:1.1-alpha-2(compile).
+20:44:33.053 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration classworlds:classworlds:1.1-alpha-2(master).
+20:44:33.054 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration classworlds:classworlds:1.1-alpha-2(runtime).
+20:44:33.056 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.oldresult.TransientConfigurationResultsBuilder] Flushing resolved configuration data in Binary store in /private/var/folders/r1/25k3rfyd61b_4c23628p2ysr0000gn/T/gradle6549746202391408836.bin. Wrote root :GradleLicensePlexus:unspecified:compile.
+20:44:33.076 [DEBUG] [nl.javadude.gradle.plugins.license.LicenseResolver] Project GradleLicensePlexus found 4 dependencies to handle.
+20:44:33.087 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DefaultArtifactDependencyResolver] Resolving configuration 'detachedConfiguration1'
+20:44:33.087 [DEBUG] [org.gradle.internal.resource.transport.http.JavaSystemPropertiesProxySettings] Found java system property 'http.nonProxyHosts': local|*.local|169.254/16|*.169.254/16. Will ignore proxy settings for these hosts.
+20:44:33.089 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] Reusing in-memory cache for repo 'MavenRepo' [4471c3b2f5ea2d40ffaa8b3948cdbacd].
+20:44:33.090 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration :GradleLicensePlexus:unspecified(detachedConfiguration1).
+20:44:33.090 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency :GradleLicensePlexus:unspecified(detachedConfiguration1) -> junit:junit:3.8.1(detachedConfiguration1)
+20:44:33.091 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version junit:junit:3.8.1
+20:44:33.092 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for junit:junit:3.8.1 using repositories [MavenRepo]
+20:44:33.092 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using junit:junit:3.8.1 from Maven repository 'MavenRepo'
+20:44:33.093 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration junit:junit:3.8.1(default).
+20:44:33.093 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] junit:junit:3.8.1(default) has no transitive incoming edges. ignoring outgoing edges.
+20:44:33.095 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.oldresult.TransientConfigurationResultsBuilder] Flushing resolved configuration data in Binary store in /private/var/folders/r1/25k3rfyd61b_4c23628p2ysr0000gn/T/gradle6549746202391408836.bin. Wrote root :GradleLicensePlexus:unspecified:detachedConfiguration1.
+20:44:33.096 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'junit.pom (junit:junit:3.8.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/junit/junit/3.8.1/16d74791c801c89b0071b1680ea0bc85c93417bb/junit-3.8.1.pom
+20:44:33.150 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'junit.jar (junit:junit:3.8.1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/junit/junit/3.8.1/99129f16442844f6a4a11ae22fbbee40b14d774f/junit-3.8.1.jar
+20:44:33.162 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DefaultArtifactDependencyResolver] Resolving configuration 'detachedConfiguration2'
+20:44:33.163 [DEBUG] [org.gradle.internal.resource.transport.http.JavaSystemPropertiesProxySettings] Found java system property 'http.nonProxyHosts': local|*.local|169.254/16|*.169.254/16. Will ignore proxy settings for these hosts.
+20:44:33.164 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] Reusing in-memory cache for repo 'MavenRepo' [4471c3b2f5ea2d40ffaa8b3948cdbacd].
+20:44:33.165 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration :GradleLicensePlexus:unspecified(detachedConfiguration2).
+20:44:33.166 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency :GradleLicensePlexus:unspecified(detachedConfiguration2) -> classworlds:classworlds:1.1-alpha-2(detachedConfiguration2)
+20:44:33.166 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version classworlds:classworlds:1.1-alpha-2
+20:44:33.167 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for classworlds:classworlds:1.1-alpha-2 using repositories [MavenRepo]
+20:44:33.167 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using classworlds:classworlds:1.1-alpha-2 from Maven repository 'MavenRepo'
+20:44:33.168 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration classworlds:classworlds:1.1-alpha-2(default).
+20:44:33.168 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] classworlds:classworlds:1.1-alpha-2(default) has no transitive incoming edges. ignoring outgoing edges.
+20:44:33.169 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.oldresult.TransientConfigurationResultsBuilder] Flushing resolved configuration data in Binary store in /private/var/folders/r1/25k3rfyd61b_4c23628p2ysr0000gn/T/gradle6549746202391408836.bin. Wrote root :GradleLicensePlexus:unspecified:detachedConfiguration2.
+20:44:33.170 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'classworlds.pom (classworlds:classworlds:1.1-alpha-2)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/classworlds/classworlds/1.1-alpha-2/8c8ad6a96a8c1168f8b12ec8a227b8261b160b26/classworlds-1.1-alpha-2.pom
+20:44:33.176 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'classworlds.jar (classworlds:classworlds:1.1-alpha-2)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/classworlds/classworlds/1.1-alpha-2/5adf2e681c57d7f48038b602f3ca2254ee82d47/classworlds-1.1-alpha-2.jar
+20:44:33.183 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DefaultArtifactDependencyResolver] Resolving configuration 'detachedConfiguration3'
+20:44:33.184 [DEBUG] [org.gradle.internal.resource.transport.http.JavaSystemPropertiesProxySettings] Found java system property 'http.nonProxyHosts': local|*.local|169.254/16|*.169.254/16. Will ignore proxy settings for these hosts.
+20:44:33.186 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] Reusing in-memory cache for repo 'MavenRepo' [4471c3b2f5ea2d40ffaa8b3948cdbacd].
+20:44:33.187 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration :GradleLicensePlexus:unspecified(detachedConfiguration3).
+20:44:33.188 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency :GradleLicensePlexus:unspecified(detachedConfiguration3) -> org.codehaus.plexus:plexus-utils:1.0.4(detachedConfiguration3)
+20:44:33.188 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.codehaus.plexus:plexus-utils:1.0.4
+20:44:33.189 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for org.codehaus.plexus:plexus-utils:1.0.4 using repositories [MavenRepo]
+20:44:33.190 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using org.codehaus.plexus:plexus-utils:1.0.4 from Maven repository 'MavenRepo'
+20:44:33.191 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.codehaus.plexus:plexus-utils:1.0.4(default).
+20:44:33.191 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] org.codehaus.plexus:plexus-utils:1.0.4(default) has no transitive incoming edges. ignoring outgoing edges.
+20:44:33.192 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.oldresult.TransientConfigurationResultsBuilder] Flushing resolved configuration data in Binary store in /private/var/folders/r1/25k3rfyd61b_4c23628p2ysr0000gn/T/gradle6549746202391408836.bin. Wrote root :GradleLicensePlexus:unspecified:detachedConfiguration3.
+20:44:33.193 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'plexus-utils.pom (org.codehaus.plexus:plexus-utils:1.0.4)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-utils/1.0.4/a82e1ddd2d795616ac58d73ed246b8ec65326dfa/plexus-utils-1.0.4.pom
+20:44:33.203 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'plexus-utils.jar (org.codehaus.plexus:plexus-utils:1.0.4)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-utils/1.0.4/60783e4623f2e44063cf2d43d9fbacb2816855c2/plexus-utils-1.0.4.jar
+20:44:33.205 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DefaultArtifactDependencyResolver] Resolving configuration 'detachedConfiguration4'
+20:44:33.206 [DEBUG] [org.gradle.internal.resource.transport.http.JavaSystemPropertiesProxySettings] Found java system property 'http.nonProxyHosts': local|*.local|169.254/16|*.169.254/16. Will ignore proxy settings for these hosts.
+20:44:33.207 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] Reusing in-memory cache for repo 'MavenRepo' [4471c3b2f5ea2d40ffaa8b3948cdbacd].
+20:44:33.208 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration :GradleLicensePlexus:unspecified(detachedConfiguration4).
+20:44:33.209 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency :GradleLicensePlexus:unspecified(detachedConfiguration4) -> org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1(detachedConfiguration4)
+20:44:33.209 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1
+20:44:33.210 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1 using repositories [MavenRepo]
+20:44:33.210 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1 from Maven repository 'MavenRepo'
+20:44:33.211 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1(default).
+20:44:33.212 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1(default) has no transitive incoming edges. ignoring outgoing edges.
+20:44:33.213 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.oldresult.TransientConfigurationResultsBuilder] Flushing resolved configuration data in Binary store in /private/var/folders/r1/25k3rfyd61b_4c23628p2ysr0000gn/T/gradle6549746202391408836.bin. Wrote root :GradleLicensePlexus:unspecified:detachedConfiguration4.
+20:44:33.215 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'plexus-container-default.pom (org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-container-default/1.0-alpha-9-stable-1/f557cb47f4594ac941d0edf08093a03ce15b51ba/plexus-container-default-1.0-alpha-9-stable-1.pom
+20:44:33.220 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DefaultArtifactDependencyResolver] Resolving configuration 'detachedConfiguration5'
+20:44:33.221 [DEBUG] [org.gradle.internal.resource.transport.http.JavaSystemPropertiesProxySettings] Found java system property 'http.nonProxyHosts': local|*.local|169.254/16|*.169.254/16. Will ignore proxy settings for these hosts.
+20:44:33.222 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] Reusing in-memory cache for repo 'MavenRepo' [4471c3b2f5ea2d40ffaa8b3948cdbacd].
+20:44:33.223 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration :GradleLicensePlexus:unspecified(detachedConfiguration5).
+20:44:33.224 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency :GradleLicensePlexus:unspecified(detachedConfiguration5) -> org.codehaus.plexus:plexus-containers:1.0.3(detachedConfiguration5)
+20:44:33.224 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.codehaus.plexus:plexus-containers:1.0.3
+20:44:33.225 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for org.codehaus.plexus:plexus-containers:1.0.3 using repositories [MavenRepo]
+20:44:33.227 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:33.231 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'org.codehaus.plexus:plexus-containers:1.0.3' in 'MavenRepo'
+20:44:33.231 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using org.codehaus.plexus:plexus-containers:1.0.3 from Maven repository 'MavenRepo'
+20:44:33.232 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.codehaus.plexus:plexus-containers:1.0.3(default).
+20:44:33.232 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] org.codehaus.plexus:plexus-containers:1.0.3(default) has no transitive incoming edges. ignoring outgoing edges.
+20:44:33.233 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.oldresult.TransientConfigurationResultsBuilder] Flushing resolved configuration data in Binary store in /private/var/folders/r1/25k3rfyd61b_4c23628p2ysr0000gn/T/gradle6549746202391408836.bin. Wrote root :GradleLicensePlexus:unspecified:detachedConfiguration5.
+20:44:33.235 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'plexus-containers.pom (org.codehaus.plexus:plexus-containers:1.0.3)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-containers/1.0.3/e16f1c9b83cdeb142fc038dd0262c61121d58c4b/plexus-containers-1.0.3.pom
+20:44:33.239 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.DefaultArtifactDependencyResolver] Resolving configuration 'detachedConfiguration6'
+20:44:33.240 [DEBUG] [org.gradle.internal.resource.transport.http.JavaSystemPropertiesProxySettings] Found java system property 'http.nonProxyHosts': local|*.local|169.254/16|*.169.254/16. Will ignore proxy settings for these hosts.
+20:44:33.242 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] Reusing in-memory cache for repo 'MavenRepo' [4471c3b2f5ea2d40ffaa8b3948cdbacd].
+20:44:33.243 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration :GradleLicensePlexus:unspecified(detachedConfiguration6).
+20:44:33.243 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting dependency :GradleLicensePlexus:unspecified(detachedConfiguration6) -> org.codehaus.plexus:plexus:1.0.4(detachedConfiguration6)
+20:44:33.244 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Selecting new module version org.codehaus.plexus:plexus:1.0.4
+20:44:33.244 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Attempting to resolve component for org.codehaus.plexus:plexus:1.0.4 using repositories [MavenRepo]
+20:44:33.247 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.parser.IvyXmlModuleDescriptorParser] post 1.3 ivy file: using exact as default matcher
+20:44:33.251 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Using cached module metadata for module 'org.codehaus.plexus:plexus:1.0.4' in 'MavenRepo'
+20:44:33.252 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.RepositoryChainComponentMetaDataResolver] Using org.codehaus.plexus:plexus:1.0.4 from Maven repository 'MavenRepo'
+20:44:33.253 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] Visiting configuration org.codehaus.plexus:plexus:1.0.4(default).
+20:44:33.254 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.DependencyGraphBuilder] org.codehaus.plexus:plexus:1.0.4(default) has no transitive incoming edges. ignoring outgoing edges.
+20:44:33.254 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.oldresult.TransientConfigurationResultsBuilder] Flushing resolved configuration data in Binary store in /private/var/folders/r1/25k3rfyd61b_4c23628p2ysr0000gn/T/gradle6549746202391408836.bin. Wrote root :GradleLicensePlexus:unspecified:detachedConfiguration6.
+20:44:33.256 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository] Found artifact 'plexus.pom (org.codehaus.plexus:plexus:1.0.4)' in resolver cache: /Users/mak/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus/1.0.4/6f66b2f7d2eef1d805c11bca91c89984cda4137/plexus-1.0.4.pom
+20:44:33.263 [DEBUG] [org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter] Finished executing task ':downloadLicenses'
+20:44:33.263 [LIFECYCLE] [class org.gradle.TaskExecutionLogger] :downloadLicenses FAILED
+20:44:33.265 [INFO] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] :downloadLicenses (Thread[main,5,main]) completed. Took 0.363 secs.
+20:44:33.266 [DEBUG] [org.gradle.execution.taskgraph.AbstractTaskPlanExecutor] Task worker [Thread[main,5,main]] finished, busy: 0.363 secs, idle: 0.002 secs
+20:44:33.272 [ERROR] [org.gradle.BuildExceptionReporter] 
+20:44:33.273 [ERROR] [org.gradle.BuildExceptionReporter] FAILURE: Build failed with an exception.
+20:44:33.273 [ERROR] [org.gradle.BuildExceptionReporter] 
+20:44:33.274 [ERROR] [org.gradle.BuildExceptionReporter] * What went wrong:
+20:44:33.274 [ERROR] [org.gradle.BuildExceptionReporter] Execution failed for task ':downloadLicenses'.
+20:44:33.275 [ERROR] [org.gradle.BuildExceptionReporter] > org.xml.sax.SAXParseException; systemId: file:///Users/mak/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus/1.0.4/6f66b2f7d2eef1d805c11bca91c89984cda4137/plexus-1.0.4.pom; lineNumber: 150; columnNumber: 34; The entity "oslash" was referenced, but not declared.
+20:44:33.276 [ERROR] [org.gradle.BuildExceptionReporter] 
+20:44:33.276 [ERROR] [org.gradle.BuildExceptionReporter] * Exception is:
+20:44:33.277 [ERROR] [org.gradle.BuildExceptionReporter] org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':downloadLicenses'.
+20:44:33.278 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:69)
+20:44:33.278 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:46)
+20:44:33.279 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.api.internal.tasks.execution.PostExecutionAnalysisTaskExecuter.execute(PostExecutionAnalysisTaskExecuter.java:35)
+20:44:33.279 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:64)
+20:44:33.280 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:58)
+20:44:33.280 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter.execute(SkipEmptySourceFilesTaskExecuter.java:52)
+20:44:33.281 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:52)
+20:44:33.281 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:53)
+20:44:33.282 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter.execute(ExecuteAtMostOnceTaskExecuter.java:43)
+20:44:33.282 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker.execute(DefaultTaskGraphExecuter.java:203)
+20:44:33.283 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker.execute(DefaultTaskGraphExecuter.java:185)
+20:44:33.283 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.processTask(AbstractTaskPlanExecutor.java:62)
+20:44:33.284 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.run(AbstractTaskPlanExecutor.java:50)
+20:44:33.284 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor.process(DefaultTaskPlanExecutor.java:25)
+20:44:33.285 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter.execute(DefaultTaskGraphExecuter.java:110)
+20:44:33.285 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:37)
+20:44:33.286 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:37)
+20:44:33.286 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.execution.DefaultBuildExecuter.access$000(DefaultBuildExecuter.java:23)
+20:44:33.286 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.execution.DefaultBuildExecuter$1.proceed(DefaultBuildExecuter.java:43)
+20:44:33.287 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:32)
+20:44:33.287 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:37)
+20:44:33.288 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:30)
+20:44:33.288 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.initialization.DefaultGradleLauncher$4.run(DefaultGradleLauncher.java:155)
+20:44:33.289 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.internal.Factories$1.create(Factories.java:22)
+20:44:33.289 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:90)
+20:44:33.290 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:52)
+20:44:33.290 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.initialization.DefaultGradleLauncher.doBuildStages(DefaultGradleLauncher.java:152)
+20:44:33.290 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.initialization.DefaultGradleLauncher.access$200(DefaultGradleLauncher.java:33)
+20:44:33.291 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.initialization.DefaultGradleLauncher$1.create(DefaultGradleLauncher.java:100)
+20:44:33.291 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.initialization.DefaultGradleLauncher$1.create(DefaultGradleLauncher.java:94)
+20:44:33.292 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:90)
+20:44:33.292 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:62)
+20:44:33.293 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.initialization.DefaultGradleLauncher.doBuild(DefaultGradleLauncher.java:94)
+20:44:33.294 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.initialization.DefaultGradleLauncher.run(DefaultGradleLauncher.java:83)
+20:44:33.295 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.exec.InProcessBuildActionExecuter$DefaultBuildController.run(InProcessBuildActionExecuter.java:94)
+20:44:33.295 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.tooling.internal.provider.ExecuteBuildActionRunner.run(ExecuteBuildActionRunner.java:28)
+20:44:33.296 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+20:44:33.296 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:43)
+20:44:33.297 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:28)
+20:44:33.297 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.exec.ContinuousBuildActionExecuter.execute(ContinuousBuildActionExecuter.java:77)
+20:44:33.298 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.exec.ContinuousBuildActionExecuter.execute(ContinuousBuildActionExecuter.java:47)
+20:44:33.298 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.exec.DaemonUsageSuggestingBuildActionExecuter.execute(DaemonUsageSuggestingBuildActionExecuter.java:51)
+20:44:33.298 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.exec.DaemonUsageSuggestingBuildActionExecuter.execute(DaemonUsageSuggestingBuildActionExecuter.java:28)
+20:44:33.299 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.cli.RunBuildAction.run(RunBuildAction.java:43)
+20:44:33.300 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.internal.Actions$RunnableActionAdapter.execute(Actions.java:170)
+20:44:33.300 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:237)
+20:44:33.301 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:210)
+20:44:33.301 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.cli.JavaRuntimeValidationAction.execute(JavaRuntimeValidationAction.java:35)
+20:44:33.302 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.cli.JavaRuntimeValidationAction.execute(JavaRuntimeValidationAction.java:24)
+20:44:33.303 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:206)
+20:44:33.304 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:169)
+20:44:33.304 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:33)
+20:44:33.305 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:22)
+20:44:33.305 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.Main.doAction(Main.java:33)
+20:44:33.306 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:45)
+20:44:33.306 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:54)
+20:44:33.307 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:35)
+20:44:33.308 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.launcher.GradleMain.main(GradleMain.java:23)
+20:44:33.308 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.wrapper.BootstrapMainStarter.start(BootstrapMainStarter.java:30)
+20:44:33.308 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.wrapper.WrapperExecutor.execute(WrapperExecutor.java:127)
+20:44:33.309 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.wrapper.GradleWrapperMain.main(GradleWrapperMain.java:61)
+20:44:33.309 [ERROR] [org.gradle.BuildExceptionReporter] Caused by: org.gradle.internal.UncheckedException: org.xml.sax.SAXParseException; systemId: file:///Users/mak/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus/1.0.4/6f66b2f7d2eef1d805c11bca91c89984cda4137/plexus-1.0.4.pom; lineNumber: 150; columnNumber: 34; The entity "oslash" was referenced, but not declared.
+20:44:33.310 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.internal.UncheckedException.throwAsUncheckedException(UncheckedException.java:45)
+20:44:33.310 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:78)
+20:44:33.311 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.doExecute(AnnotationProcessingTaskFactory.java:226)
+20:44:33.311 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:219)
+20:44:33.312 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:208)
+20:44:33.312 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:585)
+20:44:33.313 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:568)
+20:44:33.313 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:80)
+20:44:33.313 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:61)
+20:44:33.314 [ERROR] [org.gradle.BuildExceptionReporter] 	... 60 more
+20:44:33.314 [ERROR] [org.gradle.BuildExceptionReporter] Caused by: org.xml.sax.SAXParseException; systemId: file:///Users/mak/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus/1.0.4/6f66b2f7d2eef1d805c11bca91c89984cda4137/plexus-1.0.4.pom; lineNumber: 150; columnNumber: 34; The entity "oslash" was referenced, but not declared.
+20:44:33.315 [ERROR] [org.gradle.BuildExceptionReporter] 	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+20:44:33.315 [ERROR] [org.gradle.BuildExceptionReporter] 	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+20:44:33.316 [ERROR] [org.gradle.BuildExceptionReporter] 	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+20:44:33.316 [ERROR] [org.gradle.BuildExceptionReporter] 	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+20:44:33.317 [ERROR] [org.gradle.BuildExceptionReporter] 	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+20:44:33.317 [ERROR] [org.gradle.BuildExceptionReporter] 	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEntityReference(XMLDocumentFragmentScannerImpl.java:1902)
+20:44:33.318 [ERROR] [org.gradle.BuildExceptionReporter] 	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3067)
+20:44:33.318 [ERROR] [org.gradle.BuildExceptionReporter] 	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+20:44:33.319 [ERROR] [org.gradle.BuildExceptionReporter] 	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+20:44:33.319 [ERROR] [org.gradle.BuildExceptionReporter] 	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+20:44:33.320 [ERROR] [org.gradle.BuildExceptionReporter] 	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+20:44:33.320 [ERROR] [org.gradle.BuildExceptionReporter] 	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+20:44:33.321 [ERROR] [org.gradle.BuildExceptionReporter] 	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+20:44:33.321 [ERROR] [org.gradle.BuildExceptionReporter] 	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:648)
+20:44:33.322 [ERROR] [org.gradle.BuildExceptionReporter] 	at nl.javadude.gradle.plugins.license.LicenseResolver.retrieveLicensesForDependency(LicenseResolver.groovy:208)
+20:44:33.322 [ERROR] [org.gradle.BuildExceptionReporter] 	at nl.javadude.gradle.plugins.license.LicenseResolver.this$2$retrieveLicensesForDependency(LicenseResolver.groovy)
+20:44:33.323 [ERROR] [org.gradle.BuildExceptionReporter] 	at nl.javadude.gradle.plugins.license.LicenseResolver.retrieveLicensesForDependency(LicenseResolver.groovy:238)
+20:44:33.323 [ERROR] [org.gradle.BuildExceptionReporter] 	at nl.javadude.gradle.plugins.license.LicenseResolver.this$2$retrieveLicensesForDependency(LicenseResolver.groovy)
+20:44:33.324 [ERROR] [org.gradle.BuildExceptionReporter] 	at nl.javadude.gradle.plugins.license.LicenseResolver.retrieveLicensesForDependency(LicenseResolver.groovy:238)
+20:44:33.324 [ERROR] [org.gradle.BuildExceptionReporter] 	at nl.javadude.gradle.plugins.license.LicenseResolver.retrieveLicensesForDependency(LicenseResolver.groovy)
+20:44:33.325 [ERROR] [org.gradle.BuildExceptionReporter] 	at nl.javadude.gradle.plugins.license.LicenseResolver.this$2$retrieveLicensesForDependency(LicenseResolver.groovy)
+20:44:33.325 [ERROR] [org.gradle.BuildExceptionReporter] 	at nl.javadude.gradle.plugins.license.LicenseResolver$_provideLicenseMap4Dependencies_closure2_closure10_closure13.doCall(LicenseResolver.groovy:71)
+20:44:33.326 [ERROR] [org.gradle.BuildExceptionReporter] 	at nl.javadude.gradle.plugins.license.LicenseResolver$_provideLicenseMap4Dependencies_closure2_closure10_closure13.doCall(LicenseResolver.groovy)
+20:44:33.326 [ERROR] [org.gradle.BuildExceptionReporter] 	at nl.javadude.gradle.plugins.license.LicenseResolver$_provideLicenseMap4Dependencies_closure2_closure10.doCall(LicenseResolver.groovy:79)
+20:44:33.327 [ERROR] [org.gradle.BuildExceptionReporter] 	at nl.javadude.gradle.plugins.license.LicenseResolver$_provideLicenseMap4Dependencies_closure2.doCall(LicenseResolver.groovy:51)
+20:44:33.327 [ERROR] [org.gradle.BuildExceptionReporter] 	at nl.javadude.gradle.plugins.license.LicenseResolver.provideLicenseMap4Dependencies(LicenseResolver.groovy:47)
+20:44:33.328 [ERROR] [org.gradle.BuildExceptionReporter] 	at nl.javadude.gradle.plugins.license.LicenseResolver$provideLicenseMap4Dependencies.call(Unknown Source)
+20:44:33.328 [ERROR] [org.gradle.BuildExceptionReporter] 	at nl.javadude.gradle.plugins.license.DownloadLicenses$_downloadLicenses_closure1.doCall(DownloadLicenses.groovy:97)
+20:44:33.328 [ERROR] [org.gradle.BuildExceptionReporter] 	at nl.javadude.gradle.plugins.license.DownloadLicenses$_downloadLicenses_closure1.doCall(DownloadLicenses.groovy)
+20:44:33.329 [ERROR] [org.gradle.BuildExceptionReporter] 	at java_util_concurrent_Callable$call.call(Unknown Source)
+20:44:33.330 [ERROR] [org.gradle.BuildExceptionReporter] 	at nl.javadude.gradle.plugins.license.DownloadLicenses.downloadLicenses(DownloadLicenses.groovy:107)
+20:44:33.331 [ERROR] [org.gradle.BuildExceptionReporter] 	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:75)
+20:44:33.331 [ERROR] [org.gradle.BuildExceptionReporter] 	... 67 more
+20:44:33.332 [ERROR] [org.gradle.BuildExceptionReporter] 
+20:44:33.332 [LIFECYCLE] [org.gradle.BuildResultLogger] 
+20:44:33.333 [LIFECYCLE] [org.gradle.BuildResultLogger] BUILD FAILED
+20:44:33.333 [LIFECYCLE] [org.gradle.BuildResultLogger] 
+20:44:33.334 [LIFECYCLE] [org.gradle.BuildResultLogger] Total time: 4.827 secs
+20:44:33.336 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache artifact-at-repository.bin (/Users/mak/.gradle/caches/modules-2/metadata-2.15/artifact-at-repository.bin)
+20:44:33.337 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-metadata.bin (/Users/mak/.gradle/caches/modules-2/metadata-2.15/module-metadata.bin)
+20:44:33.338 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-versions.bin (/Users/mak/.gradle/caches/modules-2/metadata-2.15/module-versions.bin)
+20:44:33.340 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on artifact cache (/Users/mak/.gradle/caches/modules-2).
+20:44:33.341 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache plugin-use-metadata.bin (/Users/mak/.gradle/caches/2.7/plugin-resolution/plugin-use-metadata.bin)
+20:44:33.341 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on Plugin Resolution Cache (/Users/mak/.gradle/caches/2.7/plugin-resolution).
+20:44:33.344 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on cp_proj class cache for build file '/Users/mak/projects/GradleLicensePlexus/build.gradle' (/Users/mak/.gradle/caches/2.7/scripts/build_1dnwxyfgpqf632tuuarmvb51c/cp_proj).
+20:44:33.345 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on proj class cache for build file '/Users/mak/projects/GradleLicensePlexus/build.gradle' (/Users/mak/.gradle/caches/2.7/scripts/build_1dnwxyfgpqf632tuuarmvb51c/proj).
+20:44:33.345 [DEBUG] [org.gradle.api.internal.tasks.compile.daemon.CompilerDaemonManager] Stopping 0 compiler daemon(s).
+20:44:33.346 [INFO] [org.gradle.api.internal.tasks.compile.daemon.CompilerDaemonManager] Stopped 0 compiler daemon(s).
+20:44:33.348 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache outputFileStates.bin (/Users/mak/projects/GradleLicensePlexus/.gradle/2.7/taskArtifacts/outputFileStates.bin)
+20:44:33.349 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache taskArtifacts.bin (/Users/mak/projects/GradleLicensePlexus/.gradle/2.7/taskArtifacts/taskArtifacts.bin)
+20:44:33.350 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on task history cache (/Users/mak/projects/GradleLicensePlexus/.gradle/2.7/taskArtifacts).
+20:44:33.351 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.ivyresolve.memcache.InMemoryCachedRepositoryFactory] In-memory dependency metadata cache closed. Repos cached: 8, cache instances: 2, modules served from cache: 4, artifacts: 0
+20:44:33.352 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.CachedStoreFactory] Resolved configuration cache closed. Cache reads: 0, disk reads: 0 (avg: 0.0 secs, total: 0.0 secs)
+20:44:33.353 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.CachedStoreFactory] Resolution result cache closed. Cache reads: 0, disk reads: 0 (avg: 0.0 secs, total: 0.0 secs)
+20:44:33.354 [DEBUG] [org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.ResolutionResultsStoreFactory] Deleted 2 resolution results binary files in 0.002 secs
+mak@crab 739 GradleLicensePlexus [master] $ 
+
