@@ -1,0 +1,23 @@
+
+plugins {
+  id "com.github.hierynomus.license" version "0.12.1"
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+
+dependencies {
+  compile 'org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1'
+}
+
+downloadLicenses {
+    includeProjectDependencies = true
+    excludeDependencies = [
+        'org.codehaus.plexus:plexus:1.0.4',
+    ]
+
+    dependencyConfiguration = 'compile'
+}
