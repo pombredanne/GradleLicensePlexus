@@ -10,6 +10,7 @@ repositories {
 apply plugin: 'java'
 
 dependencies {
+  // this has a dependency on org.codehaus.plexus:plexus:1.0.4
   compile 'org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1'
 }
 
@@ -17,6 +18,8 @@ downloadLicenses {
     includeProjectDependencies = true
     excludeDependencies = [
         'org.codehaus.plexus:plexus:1.0.4',
+        // If I add this, it works:
+        //'org.codehaus.plexus:plexus-container-default:1.0-alpha-9-stable-1'
     ]
 
     dependencyConfiguration = 'compile'
